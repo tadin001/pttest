@@ -37,17 +37,17 @@ There are a few cases where NuGet may not be able to get the same package graph 
 
 ## How to enable the lock file?
 
-To enable the use of lock file with NuGet, set the MSBuild property
-
-`RestorePackagesWithLockFile` in your project file:
+To enable the use of lock file with NuGet, set the MSBuild property `RestorePackagesWithLockFile` in your project file:
 
 <pre class="lang:default decode:true">&lt;PropertyGroup&gt;
     &lt;RestorePackagesWithLockFile&gt;true&lt;/RestorePackagesWithLockFile&gt;
 &lt;/PropertyGroup&gt;</pre>
 
-If this property is set, NuGet
+If this property is set, NuGet `restore` will generate a lock file - `packages.lock.json` file at the **project root directory**. ![image][2] **Note**:
 
-`restore` will generate a lock file - `packages.lock.json` file at the **project root directory**. ![image][2] **Note**: * You must **commit/check-in** this file in the source code repository so that it is always available for `restore`. * The lock file is a tool (NuGet) generated file and should **never be manually edited**. * Lock file should not be put inside a package. It does not have any significance within a package and will never be used by NuGet.
+*   You must **commit/check-in** this file in the source code repository so that it is always available for `restore`.
+*   The lock file is a tool (NuGet) generated file and should **never be manually edited**.
+*   Lock file should not be put inside a package. It does not have any significance within a package and will never be used by NuGet.
 
 ## How does NuGet use the lock file?
 
