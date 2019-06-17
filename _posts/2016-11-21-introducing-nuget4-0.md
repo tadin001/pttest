@@ -38,6 +38,7 @@ The NuGet 4.0 Package Manager Extension is currently not available for Visual St
        </PackageReference> 
     ... 
     </ItemGroup>
+    
 
 In NuGet 4.0 RTM that will coincide with Visual Studio 2017 RTM, we aim to fully support PackageReference for other project types such as WinForms, Windows Presentation Foundation (WPF), and Universal Windows Platform (UWP).
 
