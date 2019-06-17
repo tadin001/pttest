@@ -1,7 +1,7 @@
 ---
 ID: 165
 post_title: NuGet 2.7 Release Candidate Available
-author: Luan Nguyen
+author: Jeff Handley
 post_excerpt: ""
 layout: post
 permalink: >
