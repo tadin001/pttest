@@ -35,9 +35,7 @@ Additionally, NuGet.org uses package signatures as another authentication mechan
 2.  [Install nuget.exe][5] 4.6 or later.
 3.  Run the [sign][6] command.
     
-    <
-    
-    pre>`nuget sign MyPackage.nupkg -CertificateSubjectName <mycertsubjectname> -Timestamper <timestampserviceurl></timestampserviceurl></mycertsubjectname></code?`
+        nuget sign MyPackage.nupkg -CertificateSubjectName <mycertsubjectname> -Timestamper <timestampserviceurl></timestampserviceurl></mycertsubjectname>
 
 > **Note**: [NuGet.org package signing requirements][7].
 
