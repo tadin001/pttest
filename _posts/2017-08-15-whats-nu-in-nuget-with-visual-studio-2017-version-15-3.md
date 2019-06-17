@@ -47,6 +47,7 @@ We have integrated NuGet warnings and errors with MSBuild so you can use existin
 As an example, when you install a .NET Framework package (say RestSharp) into a .NET Core 2.0 project, you will see the following [NU1701][15] warning:
 
     Warning NU1701 Package 'RestSharp 105.2.3' was restored using '.NETFramework,Version=v4.6.1' instead of the project target framework '.NETCoreApp,Version=v2.0'. This package may not be fully compatible with your project. 
+    
 
 If you are okay with the risk as stated by the warning and do not want to see it in future restores/builds, you can do one of the following:
 
@@ -105,7 +106,7 @@ We have improved the author’s view of packages they own to make it more manage
 
 ### Search results consistency with Visual Studio [#3791][26], [#4493][27]
 
-We have made the package ID to be the consistent identifier (header) for the packages that shows up on NuGet.org or Visual Studio:
+We have made the package ID to be the consistent identifier (header) for the packages that show up on NuGet.org or Visual Studio:
 
 ![Condensed Manage packages list][28]
 
@@ -119,15 +120,15 @@ In addition, we have made some improvements to package search results to fit mor
 
 We are committed to making sure that NuGet.org is fully accessible to all users. We addressed many accessibility issues for this preview in accordance with [Section 508 Laws][31] and [Web Content Accessibility Guidelines (WCAG 2.0 AA)][32]. If you find any accessibility issues, please let us know by [filing an issue on GitHub][33]. Some of the changes we’ve made include:
 
-*   Updating tab ordering on all pages to ensure proper keyboard navigation
+*   Updating tab order on all pages to ensure proper keyboard navigation
 
 *   Setting ARIA attributes on elements to make sure screen-reader technologies work on the website
 
 *   Ensuring all interactive elements have visual feedback for when they are focused by the keyboard
 
 *   Setting text colors to properly contrast with backgrounds with a minimum ratio of 4.5:1
-
-![Accessibility Demo][34]
+    
+    ![Accessibility Demo][34]
 
 ### Prominent package details
 
