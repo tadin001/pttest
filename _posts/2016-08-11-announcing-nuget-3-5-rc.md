@@ -13,7 +13,7 @@ NuGet 3.5 Beta 2 for Visual Studio 2015, nuget.exe and NuGet 2.12 RTM for Visual
 
 ## Downloads
 
-All NuGet downloads are available on <http://nuget.org/downloads>. 
+All NuGet downloads are available on <http://nuget.org/downloads>.
 
 *   2\.12 RTM version of the Visual Studio 2013 will be available via *Tools -> Extensions and Updates*
 
@@ -35,7 +35,7 @@ All NuGet downloads are available on <http://nuget.org/downloads>.
 
 ### PackageType
 
-We have started to lay the groundwork for the support for a new PackageType property in nuspec which enables package authors to classify their packages (E.g Dependencies, Tools etc..). More information on this is available in the PackageType spec [here][6]. 
+We have started to lay the groundwork for the support for a new PackageType property in nuspec which enables package authors to classify their packages (E.g Dependencies, Tools etc..). More information on this is available in the PackageType spec [here][6].
 
 ### MinClientVersion support in project.json
 
