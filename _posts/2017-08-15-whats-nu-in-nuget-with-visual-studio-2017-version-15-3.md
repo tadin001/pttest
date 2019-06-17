@@ -9,15 +9,27 @@ permalink: >
 published: true
 post_date: 2017-08-15 16:17:19
 ---
-We are happy to announce an update to the NuGet client that comes bundled with Visual Studio 2017 version 15.3 RTW and .NET Core 2.0 SDK. This release introduces support for new scenarios such as .NET Core 2.0/.NET Standard 2.0, some new features, a series of bug fixes and performance improvements. You can see more details, known issues and workarounds associated with this release in our [release notes][1]. Here are some links to get started with using the latest NuGet functionality: * [Visual Studio 2017 version 15.3][2] * [.NET Core 2.0][3] * [NuGet.exe][4] * [Visual Studio 2015 – NuGet Package Manager update (v3.6.0)][4]
+We are happy to announce an update to the NuGet client that comes bundled with Visual Studio 2017 version 15.3 RTW and .NET Core 2.0 SDK. This release introduces support for new scenarios such as .NET Core 2.0/.NET Standard 2.0, some new features, a series of bug fixes and performance improvements. You can see more details, known issues, and workarounds associated with this release in our [release notes][1]. Here are some links to get started with using the latest NuGet functionality:
 
-## TL;DR Our major focus for this release was adding support for .NET Core 2.0. In addition, we made some other improvements:
+*   [Visual Studio 2017 version 15.3][2]
+*   [.NET Core 2.0][3]
+*   [NuGet.exe][4]
+*   [Visual Studio 2015 – NuGet Package Manager update (v3.6.0)][4]
+
+## TL;DR Our major focus for this release was adding support for .NET Core 2.0.
+
+In addition, we made some other improvements:
 
 *   [Support for new TFMs][5]
 *   [MSBuild integration of NuGet warnings and errors][6]
-*   [Support for Semantic Versioning 2.0.0][7] For Visual Studio 2015, you can now start using .NET Standard 2.0 packages by installing the latest 
+*   [Support for Semantic Versioning 2.0.0][7]
+*   For Visual Studio 2015, you can now start using .NET Standard 2.0 packages by installing the latest [NuGet client (v3.6.0) for Visual Studio 2015][8]. 
 
-[NuGet client (v3.6.0) for Visual Studio 2015][8]. We are also happy to announce that we have integrated the NuGet.org facelift we had previously previewed back into the NuGet.org site, and results in the following improvements available to all NuGet.org users: * [An accessible NuGet.org site][9] * [Prominent package details page][10] * [Streamlined account settings][11]
+We are also happy to announce that we have integrated the NuGet.org facelift we had previously previewed back into the NuGet.org site and results in the following improvements available to all NuGet.org users:
+
+*   [An accessible NuGet.org site][9]
+*   [Prominent package details page][10]
+*   [Streamlined account settings][11]
 
 ## Support for new TFMs We have added support for the following TFMs -
 
