@@ -52,9 +52,9 @@ You can configure trust based on the author signature by specifying the certific
 
 If you have different repos/solutions on your machine with different trust configurations, you must isolate the global-packages folder for each solution. This is because NuGet does trust validation only on package extraction to the `globalPackagesFolder` i.e. if a package is already present in the `globalPackagesFolder`, there is no check performed.
 
-### Example Config File The following
+### Example Config File
 
-`nuget.config` file uses `require` mode and trusts packages in NuGet.org from the *Microsoft* account. Additionally, it also trusts packages signed with a private certificate.
+The following `nuget.config` file uses `require` mode and trusts packages in NuGet.org from the *Microsoft* account. Additionally, it also trusts packages signed with a private certificate.
 
 > Note that the global package folder has also been customized.
 
