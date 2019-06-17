@@ -1,0 +1,29 @@
+---
+ID: 149
+post_title: Workflow Changes for CodePlex Issues
+author: Howard Dierking
+post_excerpt: ""
+layout: post
+permalink: >
+  http://devblogs.microsoft.com/nuget/workflow-changes-for-codeplex-issues/
+published: true
+post_date: 2013-02-11 00:00:00
+---
+A couple weeks ago, some of you noticed that the core team closed a few issues on <http://nuget.codeplex.com> that were in the “Soonish” release. The items that were closed were feature suggestions that, while not bad ideas, were things that the core team decided weren’t going to make the cut for the next few releases. The pushback from the community in response was understandable. After all, if NuGet is an OSS project, why would the core team close good ideas simply because we weren’t going to act on them? Firstly, we’ve reopened the items that we had closed and moved them to the “Product Backlog” release (more on that momentarily). We also spent some time thinking about how we can do a better job balancing what feels like two competing interests in the same issue repository. The first is the interest of the core team to more efficiently manage its day to day work – and this means maintaining a high signal to noise ratio in the release buckets that we work from. The second interest is that of the community to actively participate in development of NuGet, whether that means filing new product ideas or pulling a new idea from the list which will ultimately find its way back into the product via a pull request. So here’s how we’re planning to organize issues and perform triage going forward in an attempt to better satisfy both sets of interests:
+
+1.  Get rid of the “Soonish” release. We had originally created this as a way to identify things that were potential candidates for a near term release as opposed to items in “Product Backlog” – however, over the last several months, we’ve observed that items in this release have built up to a level where the core team isn’t going to be able to act on many of these either – resulting in effectively 2 different backlog buckets. In sum, it was a nice idea, but it hasn’t worked out in the way that we had hoped.
+2.  Rename “Product Backlog” to “Up For Grabs”. This release represents issues that we would accept as a pull request if someone from the community implemented it with sufficient quality. One of the reasons that we closed items in “Soonish” rather than moving them to backlog was that we believe "backlog" to imply that the core team will eventually get around to acting on the item, and we felt like this was misleading. Items in backlog are those that the core team has decided are good ideas but not ideas that we will likely revisit. We do periodically pull highly-voted items from the backlog into an active release, but this is not a part of our regular rhythm. As such, we want the name of the release to more accurately reflect how it’s being used.
+3.  Add an acknowledgements.txt file to the repository and insert this text into the release notes. In general, we want to figure out better ways to thank individuals who take their role in the NuGet community to the next step by submitting pull requests for the issues that they are passionate about. Adding this kind of recognition seems like an obvious step that we can take here to do better at encouraging and rewarding this kind of participation.
+4.  We triage issues a couple times per week. When considering a new issue, the decision flow will look like the following:
+    *   Is this something that we need to work on for the current release? If so, assign to the current release. The bar for this question changes based on the type of release (e.g. some releases are more focused on risk management, some on new feature development). 
+    *   Is this something that the core team plans to work on? If so, assign to the next actual release. No more of the revolving “Next” release as this would allow us to be passive about making decisions on issues that we repeatedly never get to. 
+    *   Is this something that we think is a good idea, but know that the core team is not going to get around to working on in the foreseeable future? If so, assign to “Up For Grabs” release so that it can be voted on and **ideally** picked up by the community.
+    *   Is this something that we do not think is a good idea for NuGet? If so, close the issue with relevant explanation.
+5.  The planning process for a new release will look like the following:
+    *   Ensure that roadmap features have been added to the upcoming release (e.g. ensure that all potential work for the release has been added in the form of a CodePlex issue).
+    *   Triage all of the unfinished items in the release that was just completed. For each item, either move it to the next release, move to “Up For Grabs”, or close.
+    *   If an issue has cascaded from release to release more than 2 times, move it to “Up For Grabs”
+
+We’re sorry if the recent closing of issues on CodePlex gave you the impression that we were somehow making a move towards being less open and hope that the above steps give you a little more insight into how we think about our working and planning rhythms. The core team would love to be able to implement all of the good ideas that fit within the vision for NuGet - however, we are finite and can only get through a subset of the total items. With your help in grabbing issues from Up For Grabs, we're looking forward to being able to get a lot more accomplished!
+
+The quality of issues filed on NuGet has historically been very high, and we appreciate that. In the same way, we want and appreciate your thoughts and comments on how we can continually improve our processes - hopefully that is evident in these changes. As such, we’ll hold off for a couple of days to collect your feedback on the new approach and then, assuming that there are no blocking issues raised, make the changes outlined above.
