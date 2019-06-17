@@ -77,9 +77,7 @@ We continuously receive feedback to enhance the NuGet package manager experience
 
 ## We want to hear your feedback!
 
-We would love to hear your feedback on these or any additional items you think we should be prioritizing. You can reach out to us either by
-
-[creating a new GitHub issue][22] or by tagging [@nuget][23] in your tweets. You can also email me at <anangaur@microsoft.com> or tag me, [@adgrv][24], in your tweets. We will announce any changes or updates to our plan on our [NuGet/Announcements][25] repo.
+We would love to hear your feedback on these or any additional items you think we should be prioritizing. You can reach out to us either by [creating a new GitHub issue][22] or by tagging [@nuget][23] in your tweets. You can also email me at <anangaur@microsoft.com> or tag me, [@adgrv][24], in your tweets. We will announce any changes or updates to our plan on our [NuGet/Announcements][25] repo.
 
  [1]: https://github.com/Microsoft/artifacts-credprovider/blob/master/README.md
  [2]: https://www.visualstudio.com/team-services/package-management
