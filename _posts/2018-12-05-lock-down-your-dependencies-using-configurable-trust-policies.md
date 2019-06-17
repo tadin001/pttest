@@ -27,7 +27,7 @@ You can then define your trust boundaries by specifying `trustedSigners`. For ex
 
 <pre><code class="language-cmd"> nuget.exe trusted-signers add -name NuGet.org -serviceindex https://api.nuget.org/v3/index.json</code></pre>
 
-*   If you want to trust packages from specific NuGet authors/accounts, you can specify the collection of owners: 
+If you want to trust packages from specific NuGet authors/accounts, you can specify the collection of owners:
 
 <pre><code class="language-cmd"> nuget.exe trusted-signers add -name NuGet.org -serviceindex https://api.nuget.org/v3/index.json -owners microsoft;nuget</code></pre>
 
@@ -58,8 +58,6 @@ If you have different repos/solutions on your machine with different trust confi
 
 > Note that the global package folder has also been customized.
 
-<pre><code class="language-xml"></code></pre>
-
 <pre class="highlight"><code>&lt;span class="cp">&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;/span>
 &lt;span class="nt">&lt;configuration&gt;&lt;/span>
   
@@ -89,8 +87,6 @@ If you have different repos/solutions on your machine with different trust confi
   &lt;span class="nt">&lt;/repository&gt;&lt;/span>
  &lt;span class="nt">&lt;/trustedSigners&gt;&lt;/span>
 &lt;span class="nt">&lt;/configuration&gt;&lt;/span></code></pre>
-
-<pre><code class="language-xml"></code></pre>
 
 ## Reference documentation
 
