@@ -15,15 +15,15 @@ For the past several months we have focused on various features to improve packa
 
 ## How to lock down your environment
 
-### Turn on `require` mode You can enforce all your package dependencies to be signed just by enabling the
+### Turn on `require` mode
 
-`require` mode.
+You can enforce all your package dependencies to be signed just by enabling the `require` mode.
 
 <pre><code class="language-cmd">nuget.exe config -set signatureValidationMode=require</code></pre>
 
-### Configure trusted package repositories You can then define your trust boundaries by specifying
+### Configure trusted package repositories
 
-`trustedSigners`. For example, * You may just want to trust all packages available in NuGet.org:
+You can then define your trust boundaries by specifying `trustedSigners`. For example, * You may just want to trust all packages available in NuGet.org:
 
 <pre><code class="language-cmd"> nuget.exe trusted-signers add -name NuGet.org -serviceindex https://api.nuget.org/v3/index.json</code></pre>
 
@@ -34,9 +34,9 @@ For the past several months we have focused on various features to improve packa
     > NuGet.org adds repository signature to all new packages. We have started signing existing packages and we will announce when we are done. Subscribe to [NuGet/Announcements][4] repo for latest NuGet updates.
     
 
-### Configure trusted package authors You can configure trust based on the author signature by specifying the certificate fingerprint in SHA256. You can get the SHA256 fingerprint from any signed package using the
+### Configure trusted package authors
 
-[verify command][4]. This enables you to consume packages from this trusted author irrespective of the package repository/source.
+You can configure trust based on the author signature by specifying the certificate fingerprint in SHA256. You can get the SHA256 fingerprint from any signed package using the [verify command][4]. This enables you to consume packages from this trusted author irrespective of the package repository/source.
 
 <pre><code class="language-cmd">nuget.exe trusted-signers add -name Microsoft -certificateFingerprint 3F9001EA83C560D712C24CF213C3D312CB3BFF51EE89435D3430BD06B5D0EECE</code></pre>
 
@@ -48,9 +48,9 @@ For the past several months we have focused on various features to improve packa
 
 `nuget.config` is a great option to share your settings across all your team members and even CI machines. If you keep your `nuget.config` file with the solution folder, install and restore operations will always use these settings. And this file can be easily shared along with your source code. To create a `nuget.config` file you can use the [`dotnet new nugetconfig`][6] from your solution root folder.
 
-#### Use a different global-packages folder If you have different repos/solutions on your machine with different trust configurations, you must isolate the global-packages folder for each solution. This is because NuGet does trust validation only on package extraction to the
+#### Use a different global-packages folder
 
-`globalPackagesFolder` i.e. if a package is already present in the `globalPackagesFolder`, there is no check performed.
+If you have different repos/solutions on your machine with different trust configurations, you must isolate the global-packages folder for each solution. This is because NuGet does trust validation only on package extraction to the `globalPackagesFolder` i.e. if a package is already present in the `globalPackagesFolder`, there is no check performed.
 
 ### Example Config File The following
 
@@ -92,13 +92,13 @@ For the past several months we have focused on various features to improve packa
 
 <pre><code class="language-xml"></code></pre>
 
-## Reference documentation Here are the docs for
+## Reference documentation
 
-[configuring package signature requirements][7], the nuget.config [trustedSigners section][8], and the [trusted-signers][5] command.
+Here are the docs for [configuring package signature requirements][7], the nuget.config [trustedSigners section][8], and the [trusted-signers][5] command.
 
-## Conclusion Defining trust policies enable additional security checks to protect your entire dependency graph, not only for packages obtained from NuGet.org but also from any other package repository. As long as all the packages you consume are signed you can enable the
+## Conclusion
 
-`require` mode to detect any tampered, or unsigned package. It lets you control the authors and repositories that you trust. For more information on how to protect your dependencies with signed packages, look at our [documentation][9]. If you have any feedback or encounter any issues while using this feature, do reach out to us by creating a [GitHub issue][10] or by tagging [@nuget][11] in your tweets.
+Defining trust policies enable additional security checks to protect your entire dependency graph, not only for packages obtained from NuGet.org but also from any other package repository. As long as all the packages you consume are signed you can enable the `require` mode to detect any tampered or unsigned package. It lets you control the authors and repositories that you trust. For more information on how to protect your dependencies with signed packages, look at our [documentation][9]. If you have any feedback or encounter any issues while using this feature, do reach out to us by creating a [GitHub issue][10] or by tagging [@nuget][11] in your tweets.
 
  [1]: https://blog.nuget.org/20170914/NuGet-Package-Signing.html
  [2]: https://blog.nuget.org/20180522/Introducing-signed-package-submissions.html
