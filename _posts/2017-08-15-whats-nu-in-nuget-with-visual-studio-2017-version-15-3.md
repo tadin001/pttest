@@ -32,21 +32,23 @@ We are also happy to announce that we have integrated the NuGet.org facelift we 
 *   [Prominent package details page][10]
 *   [Streamlined account settings][11]
 
-## Support for new TFMs We have added support for the following TFMs -
+## Support for new TFMs
 
-`netcoreapp2.0` and `netstandard2.0`. We also enabled `Tizen` as a supported TFM that helps integration of Tizen .NET libraries with Xamarin Forms. The complete list of supported TFMs is reflected in this [documentation][12].
+We have added support for the following TFMs - `netcoreapp2.0` and `netstandard2.0`. We also enabled `Tizen` as a supported TFM that helps integration of Tizen .NET libraries with Xamarin Forms. The complete list of supported TFMs is reflected in this [documentation][12].
 
 ## MSBuild integration of NuGet warnings and errors
 
-We have integrated NuGet warnings and errors with MSBuild so you can use existing MSBuild properties to suppress certain warnings or elevate them to errors. In addition, we have also improved warnings and errors to output relevant information and thereby making them more actionable. All NuGet warnings/errors now have a unique number associated with them as documented
+We have integrated NuGet warnings and errors with MSBuild so you can use existing MSBuild properties to suppress certain warnings or elevate them to errors. In addition, we have also improved warnings and errors to output relevant information and thereby making them more actionable. All NuGet warnings/errors now have a unique number associated with them as documented [here][13].
 
-[here][13]. **Note**: These improvements are only available to project systems that support expressing NuGet dependencies using [PackageReference][14].
+**Note**: These improvements are only available to project systems that support expressing NuGet dependencies using [PackageReference][14].
 
 ### How does it work?
 
-As an example, when you install a .NET Framework package (say RestSharp) into a .NET Core 2.0 project, you will see the following
+As an example, when you install a .NET Framework package (say RestSharp) into a .NET Core 2.0 project, you will see the following [NU1701][15] warning:
 
-[NU1701][15] warning: Warning NU1701 Package 'RestSharp 105.2.3' was restored using '.NETFramework,Version=v4.6.1' instead of the project target framework '.NETCoreApp,Version=v2.0'. This package may not be fully compatible with your project. If you are okay with the risk as stated by the warning and do not want to see it in future restores/builds, you can do one of the following:
+    Warning NU1701 Package 'RestSharp 105.2.3' was restored using '.NETFramework,Version=v4.6.1' instead of the project target framework '.NETCoreApp,Version=v2.0'. This package may not be fully compatible with your project. 
+
+If you are okay with the risk as stated by the warning and do not want to see it in future restores/builds, you can do one of the following:
 
 #### Suppress the warning in the project on a PackageReference basis
 
@@ -79,13 +81,17 @@ If you have set your project’s build property to treat all warnings as errors,
 If your package version contains one of the following, they will not be visible from the older clients (NuGet clients before 4.3.0 or Visual Studio before 2017 version 15.3):
 
 1.  The pre-release label is dot-separated, e.g. 1.0.0-alpha.1
-2.  The version has build-metadata, e.g. 1.0.0+githash We recommend you consider this to be a beta-feature until a significant majority of our users are on these latest clients that understand Semantic Versioning 2.0.0. Read more on Semantic Versioning 2.0.0 NuGet support, 
-
-[here][21].
+2.  The version has build-metadata, e.g. 1.0.0+githash We recommend you consider this to be a beta-feature until a significant majority of our users are on these latest clients that understand Semantic Versioning 2.0.0. Read more on Semantic Versioning 2.0.0 NuGet support, [here][21].
 
 ## Update to the NuGet client in Visual Studio 2015
 
-We wanted to ensure that developers using Visual Studio 2015 can use packages targeting .NET Standard 2.0, and have created an [update][4] to the NuGet client in Visual Studio 2015 that adds the following improvements: * Support for consuming .NET Standard 2.0 packages into the compatible projects * Support for Semantic Versioning 2.0.0 packages * Fix for UI hang bug as described in NuGet [#4976][22]
+We wanted to ensure that developers using Visual Studio 2015 can use packages targeting .NET Standard 2.0, and have created an [update][4] to the NuGet client in Visual Studio 2015 that adds the following improvements:
+
+*   Support for consuming .NET Standard 2.0 packages into the compatible projects
+
+*   Support for Semantic Versioning 2.0.0 packages
+
+*   Fix for UI hang bug as described in NuGet [#4976][22]
 
 ## The facelift to NuGet.org site is live!
 
