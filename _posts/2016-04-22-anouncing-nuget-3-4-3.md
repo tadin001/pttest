@@ -21,7 +21,7 @@ You can download the latest 3.4.3 RTM VS extension and Windows x86 Commandline f
 *   Fixed an issue that caused restore failures in C++/CLI projects with project.json.
 *   Some packages (E.g ModernHttpClient) where not being unzipped correctly when you use nuget in mono. This has now been fixed in this release.
 
-Our [release notes for 3.4.3][3] and the [issues list in GitHub][1], goes into more details around the changes in this release. 
+Our [release notes for 3.4.3][3] and the [issues list in GitHub][1], goes into more details around the changes in this release.
 
 ## What's Next
 
@@ -31,7 +31,7 @@ Along with improving the overall quality and performance of the product, the tea
 
 We want NuGet to meet the evolving needs for community and provide an amazing package management and authoring experience. In order for us to do that, we need your help!!!
 
-We want to talk to you to understand your pain points and needs. This is the feedback we want to use as the foundation of our future roadmap. All we need is 15-30 minutes of your time. If you are interested in providing us with feedback, here is our calendly link - <https://calendly.com/harikm/nuget-feedback>. Book any available time that is convenient for you to talk to us. If you would like to send us an email instead, hit me up at harikm@microsoft.com. 
+We want to talk to you to understand your pain points and needs. This is the feedback we want to use as the foundation of our future roadmap. All we need is 15-30 minutes of your time. If you are interested in providing us with feedback, here is our calendly link - <https://calendly.com/harikm/nuget-feedback>. Book any available time that is convenient for you to talk to us. If you would like to send us an email instead, hit me up at harikm@microsoft.com.
 
 Our team is super excited about engaging with our customers more deeply and we would be happy to answer any questions you might have as well. As always, if you run into any issues or have an idea, open an issue on [GitHub][4].
 
