@@ -31,8 +31,7 @@ If you want to trust packages from specific NuGet authors/accounts, you can spec
 
 <pre><code class="language-cmd"> nuget.exe trusted-signers add -name NuGet.org -serviceindex https://api.nuget.org/v3/index.json -owners microsoft;nuget</code></pre>
 
-    > NuGet.org adds repository signature to all new packages. We have started signing existing packages and we will announce when we are done. Subscribe to [NuGet/Announcements][4] repo for latest NuGet updates.
-    
+> NuGet.org adds repository signature to all new packages. We have started signing existing packages and we will announce when we are done. Subscribe to [NuGet/Announcements][4] repo for latest NuGet updates.
 
 ### Configure trusted package authors
 
