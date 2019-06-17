@@ -35,7 +35,7 @@ You can opt in to auto update or notifications from the gallery by using the bet
 
 ### PackageType
 
-We have started to lay the groundwork to support a new PackageType property in the nuspec. This property allows package authors to classify their packages (E.g Dependencies, Tools etc..). More information on this is available in the PackageType spec [here][6]. 
+We have started to lay the groundwork to support a new PackageType property in the nuspec. This property allows package authors to classify their packages (E.g Dependencies, Tools etc..). More information on this is available in the PackageType spec [here][6].
 
 ### MinClientVersion support in project.json
 
