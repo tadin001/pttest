@@ -13,9 +13,9 @@ post_date: 2018-08-27 00:00:00
 ---
 NuGet.org now supports surfacing source code repository link for NuGet packages. This will enable package authors to surface both the project's website and the source repository using the `projectUrl` and the `repository` properties respectively instead of having to choose between the two using just the `projectUrl` property. The nuspec has supported the `repository` property for a while and today more than 16,000 packages contain this property. We have now come a full circle by surfacing this information on the package details page (on NuGet.org). This is how it looks for the [Newtonsoft.Json][1] package: ![Source Code][2] In this post, I would like to elaborate on the different ways to light up this feature for your packages.
 
-### Using `nuspec` If you are using a
+### Using `nuspec`
 
-`nuspec` file for packaging, you will need to add a repository tag within your nuspec. For example, take a look at [NUnit's nuspec][3]: <package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd"> <metadata minClientVersion="2.12"> <!-- .. snipped ... --></metadata></package>
+If you are using a `nuspec` file for packaging, you will need to add a repository tag within your nuspec. For example, take a look at [NUnit's nuspec][3]: <package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd"> <metadata minClientVersion="2.12"> <!-- .. snipped ... --></metadata></package>
 
           <!-- Add this line and making the URL targets your project --> 
           <repository type="git" url="https://github.com/nunit/nunit" />
@@ -25,9 +25,9 @@ NuGet.org now supports surfacing source code repository link for NuGet packages.
     </package>
     
 
-### Using project file If you create your NuGet package directly with a project file, you will need to add a
+### Using project file
 
-`RepositoryUrl` and a `RepositoryType` to the project file to enable this new feature on your package. Here's an example on how [RestSharp][4] implements it directly within their `csproj`. <project Sdk="Microsoft.NET.Sdk"> <propertygroup> <!-- .. snipped ... --></propertygroup></project>
+If you create your NuGet package directly with a project file, you will need to add a `RepositoryUrl` and a `RepositoryType` to the project file to enable this new feature on your package. Here's an example on how [RestSharp][4] implements it directly within their `csproj`. <project Sdk="Microsoft.NET.Sdk"> <propertygroup> <!-- .. snipped ... --></propertygroup></project>
 
         <RepositoryUrl>https://github.com/restsharp/RestSharp.git</RepositoryUrl> 
         <RepositoryType>git</RepositoryType> 
@@ -39,7 +39,7 @@ NuGet.org now supports surfacing source code repository link for NuGet packages.
 
 ### Using SourceLink
 
-[SourceLink][5] enables source debugging directly within your .NET Core packages. At the same time, it also inserts the repostory attribute in your project to have the link show up on the NuGet package's details page. To use it, you need to add the following to your `csproj` file.
+[SourceLink][5] enables source debugging directly within your .NET Core packages. At the same time, it also inserts the repository attribute in your project to have the link show up on the NuGet package's details page. To use it, you need to add the following to your `csproj` file.
 
 <pre class="highlight"><code>&lt;PropertyGroup&gt;
     &lt;!-- Optional: Publish the repository URL in the built .nupkg (in the NuSpec &lt;Repository&gt; element) --&gt;
@@ -65,13 +65,11 @@ NuGet.org now supports surfacing source code repository link for NuGet packages.
 
 &lt;/ItemGroup&gt;</code></pre>
 
-For example, you can refer to the
+For example, you can refer to the [Newtonsoft.Json's implementation][6].
 
-[Newtonsoft.Json's implementation][6].
+### Using Cake Build
 
-### Using Cake Build Many open source projects use
-
-[Cake Build][7] to package their projects. Here’s how you need to change your `NuGetPackSettings` to allow the source code repository link to be surfaced on NuGet.org:
+Many open source projects use [Cake Build][7] to package their projects. Here’s how you need to change your `NuGetPackSettings` to allow the source code repository link to be surfaced on NuGet.org:
 
 <pre class="highlight"><code>var nuGetPackSettings = new NuGetPackSettings
     {
@@ -83,9 +81,9 @@ For example, you can refer to the
         // snipped
     };</code></pre>
 
-### Conclusion With these small changes to your packaging process, you will quickly get a source code link next to your project. You won't have to choose between your project page or your project repository anymore. For more information on how nuspec and csproj properties are mapped, look at
+### Conclusion
 
-[our documentation][8]. If you want to reach out to us, you can either [create a new GitHub issue][9] or tag [@nuget][10] in your tweets.
+With these small changes to your packaging process, you will quickly get a source code link next to your project. You won't have to choose between your project page or your project repository anymore. For more information on how nuspec and csproj properties are mapped, look at [our documentation][8]. If you want to reach out to us, you can either [create a new GitHub issue][9] or tag [@nuget][10] in your tweets.
 
  [1]: https://www.nuget.org/packages/Newtonsoft.Json/
  [2]: https://devblogs.microsoft.com/nuget/wp-content/uploads/sites/49/2019/05/source-code-example.png
