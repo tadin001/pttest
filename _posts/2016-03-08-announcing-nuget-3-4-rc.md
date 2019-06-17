@@ -23,7 +23,7 @@ The first thing that NuGet Visual Studio users should notice when using the NuGe
 
 ![Speedy Start][2]
 
-You'll see similar speed improvements in the Updates and Consolidate tabs, where we've optimized the offline storage and retrieval of package information. One other bit of tuning that we did to this screen was to enable gzip-compressed data from the NuGet repositories. This should be a small change that we can already see has made a big improvement in search and download performance from our services. 
+You'll see similar speed improvements in the Updates and Consolidate tabs, where we've optimized the offline storage and retrieval of package information. One other bit of tuning that we did to this screen was to enable gzip-compressed data from the NuGet repositories. This should be a small change that we can already see has made a big improvement in search and download performance from our services.
 
 Another feature that we cleaned up on the user-interface is that the Installed, Consolidate and Updates tabs now show the list of packages sorted alphabetically. We know this was an important feature to the community and we updated the interface as requested.
 
