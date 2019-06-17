@@ -11,7 +11,9 @@ post_date: 2019-04-10 00:00:00
 ---
 We published our last NuGet roadmap in June last year. Many of the features announced were major additions to NuGet and we have been hard at work to implement those over the last few months. In this post, we will start by summarizing the features we have completed and then peek into the next wave of work planned.
 
-## Looking back Here are some features that were announced in our last roadmap blog post and have since been released.
+## Looking back
+
+Here are some features that were announced in our last roadmap blog post and have since been released.
 
 ### Cross-platform credential provider support for Azure Artifacts
 
@@ -29,7 +31,9 @@ We published our last NuGet roadmap in June last year. Many of the features anno
 
 *Status: Implemented | [Blog post][7] | [Documentation][8]* Projects that use `PackageReference` to manage NuGet dependencies specify only their direct package dependencies. The full closure of package dependencies is determined at build-time and may differ across builds due to a few rare corner cases. With the [per project lock file feature][8], we have now addressed this issue so that restores (builds) are consistent no matter when and where they happen. We want to expand this experience and allow [locking the dependencies centrally i.e. at a solution or repo level][9].
 
-## Upcoming experiences Here is a list of experiences that are either in progress or planned. Note that this list is not in any particular order - when a work item is committed, it is announced on our
+## Upcoming experiences
+
+Here is a list of experiences that are either in progress or planned. Note that this list is not in any particular order - when a work item is committed, it is announced on our
 
 [NuGet/Announcements][10] repo with its feature specification, discussion issue, and any other relevant links.
 
@@ -53,7 +57,9 @@ We published our last NuGet roadmap in June last year. Many of the features anno
 
 *Status: Planned | GitHub issue(s): [#7284][21]* We continuously receive feedback to enhance the NuGet package manager experience around managing packages, NuGet settings, sources and other configurations. We plan to enhance some of these experiences starting with NuGet settings, sources and configuration management. These enhancements are also necessary for us to enable the [trust policies][5] experience on Visual Studio.
 
-## We want to hear your feedback! We would love to hear your feedback on these or any additional items you think we should be prioritizing. You can reach out to us either by
+## We want to hear your feedback!
+
+We would love to hear your feedback on these or any additional items you think we should be prioritizing. You can reach out to us either by
 
 [creating a new GitHub issue][22] or by tagging [@nuget][23] in your tweets. You can also email me at <anangaur@microsoft.com> or tag me, [@adgrv][24], in your tweets. We will announce any changes or updates to our plan on our [NuGet/Announcements][25] repo.
 
