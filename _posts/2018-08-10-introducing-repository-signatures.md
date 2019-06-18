@@ -1,7 +1,7 @@
 ---
 ID: 137
 post_title: NuGet.org starts repo-signing packages
-author: Ricardo Minguez (Rido)
+author: Rido
 post_excerpt: ""
 layout: post
 permalink: >
