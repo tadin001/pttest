@@ -3,7 +3,7 @@ ID: 140
 post_title: >
   Lock down your dependencies using
   configurable trust policies
-author: Ricardo Minguez (Rido)
+author: Rido
 post_excerpt: ""
 layout: post
 permalink: >
