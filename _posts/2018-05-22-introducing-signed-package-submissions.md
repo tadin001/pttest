@@ -3,7 +3,7 @@ ID: 135
 post_title: >
   Introducing signed package submissions
   to NuGet.org
-author: Ricardo Minguez (Rido)
+author: Rido
 post_excerpt: ""
 layout: post
 permalink: >
