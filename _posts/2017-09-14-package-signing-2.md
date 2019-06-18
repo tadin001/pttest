@@ -1,7 +1,7 @@
 ---
 ID: 126
 post_title: NuGet Package Signing
-author: Ricardo Minguez (Rido)
+author: Rido
 post_excerpt: ""
 layout: post
 permalink: >
