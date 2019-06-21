@@ -1,11 +1,11 @@
 ---
-ID: 805
+ID: 226195
 post_title: Testing upgraded QA
-author: Serhii Rohatin
+author: seroha
 post_excerpt: ""
 layout: post
 permalink: >
-  http://devblogs.microsoft.com/nuget/testing-upgraded-qa/
+  https://qadevblogs.wpengine.com/visualstudio/testing-upgraded-qa-2/
 published: true
 post_date: 2019-06-13 18:46:16
 ---
