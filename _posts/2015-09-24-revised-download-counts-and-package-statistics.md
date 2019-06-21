@@ -1,13 +1,13 @@
 ---
-ID: 90
+ID: 226057
 post_title: >
   Revised Download Counts and Package
   Statistics
-author: Maarten Balliauw
+author: seroha
 post_excerpt: ""
 layout: post
 permalink: >
-  http://devblogs.microsoft.com/nuget/revised-download-counts-and-package-statistics/
+  https://qadevblogs.wpengine.com/visualstudio/revised-download-counts-and-package-statistics/
 published: true
 post_date: 2015-09-24 00:00:00
 ---

@@ -1,11 +1,11 @@
 ---
-ID: 77
+ID: 226030
 post_title: NuGet 3.0 Preview
-author: Jeff Handley
+author: seroha
 post_excerpt: ""
 layout: post
 permalink: >
-  http://devblogs.microsoft.com/nuget/nuget-3-0-preview/
+  https://qadevblogs.wpengine.com/visualstudio/nuget-3-0-preview/
 published: true
 post_date: 2014-11-12 00:00:00
 ---

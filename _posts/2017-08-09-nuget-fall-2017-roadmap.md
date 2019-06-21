@@ -1,11 +1,11 @@
 ---
-ID: 124
+ID: 226119
 post_title: NuGet Fall 2017 Roadmap
-author: Unni Ravindranathan
+author: seroha
 post_excerpt: ""
 layout: post
 permalink: >
-  http://devblogs.microsoft.com/nuget/nuget-fall-2017-roadmap/
+  https://qadevblogs.wpengine.com/visualstudio/nuget-fall-2017-roadmap/
 published: true
 post_date: 2017-08-09 00:00:00
 ---

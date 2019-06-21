@@ -1,11 +1,11 @@
 ---
-ID: 117
+ID: 226106
 post_title: NuGet.Server 2.11.3 now available
-author: Jon Chu
+author: seroha
 post_excerpt: ""
 layout: post
 permalink: >
-  http://devblogs.microsoft.com/nuget/nuget-server-2-11-3-now-available/
+  https://qadevblogs.wpengine.com/visualstudio/nuget-server-2-11-3-now-available/
 published: true
 post_date: 2016-12-21 00:00:00
 ---

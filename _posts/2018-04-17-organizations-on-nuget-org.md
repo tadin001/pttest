@@ -1,11 +1,11 @@
 ---
-ID: 132
+ID: 226137
 post_title: Organizations on NuGet.org
-author: Anand Gaurav
+author: seroha
 post_excerpt: ""
 layout: post
 permalink: >
-  http://devblogs.microsoft.com/nuget/organizations-on-nuget-org/
+  https://qadevblogs.wpengine.com/visualstudio/organizations-on-nuget-org/
 published: true
 post_date: 2018-04-17 00:00:00
 ---

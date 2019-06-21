@@ -1,11 +1,11 @@
 ---
-ID: 150
+ID: 225943
 post_title: Introducing Package Statistics
-author: Jeff Handley
+author: seroha
 post_excerpt: ""
 layout: post
 permalink: >
-  http://devblogs.microsoft.com/nuget/introducing-package-statistics/
+  https://qadevblogs.wpengine.com/visualstudio/introducing-package-statistics/
 published: true
 post_date: 2013-02-26 00:00:00
 ---

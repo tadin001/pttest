@@ -1,11 +1,11 @@
 ---
-ID: 167
+ID: 225975
 post_title: NuGet 2.7 Released
-author: Jeff Handley
+author: seroha
 post_excerpt: ""
 layout: post
 permalink: >
-  http://devblogs.microsoft.com/nuget/nuget-2-7-released/
+  https://qadevblogs.wpengine.com/visualstudio/nuget-2-7-released/
 published: true
 post_date: 2013-08-22 00:00:00
 ---

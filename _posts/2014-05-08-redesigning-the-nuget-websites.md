@@ -1,11 +1,11 @@
 ---
-ID: 64
+ID: 226005
 post_title: Redesigning the NuGet Websites
-author: Jeff Handley
+author: seroha
 post_excerpt: ""
 layout: post
 permalink: >
-  http://devblogs.microsoft.com/nuget/redesigning-the-nuget-websites/
+  https://qadevblogs.wpengine.com/visualstudio/redesigning-the-nuget-websites/
 published: true
 post_date: 2014-05-08 00:00:00
 ---

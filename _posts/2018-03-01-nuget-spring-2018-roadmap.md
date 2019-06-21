@@ -1,11 +1,11 @@
 ---
-ID: 129
+ID: 226131
 post_title: NuGet Spring 2018 Roadmap
-author: Anand Gaurav
+author: seroha
 post_excerpt: ""
 layout: post
 permalink: >
-  http://devblogs.microsoft.com/nuget/nuget-spring-2018-roadmap/
+  https://qadevblogs.wpengine.com/visualstudio/nuget-spring-2018-roadmap/
 published: true
 post_date: 2018-03-01 00:00:00
 ---

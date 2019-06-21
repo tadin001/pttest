@@ -1,11 +1,11 @@
 ---
-ID: 91
+ID: 226059
 post_title: Meet the new NuGet status page
-author: Maarten Balliauw
+author: seroha
 post_excerpt: ""
 layout: post
 permalink: >
-  http://devblogs.microsoft.com/nuget/meet-the-new-nuget-status-page/
+  https://qadevblogs.wpengine.com/visualstudio/meet-the-new-nuget-status-page/
 published: true
 post_date: 2015-09-28 00:00:00
 ---

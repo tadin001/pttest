@@ -1,11 +1,11 @@
 ---
-ID: 120
+ID: 226112
 post_title: Introducing scoped API keys
-author: Anand Gaurav
+author: seroha
 post_excerpt: ""
 layout: post
 permalink: >
-  http://devblogs.microsoft.com/nuget/introducing-scoped-api-keys/
+  https://qadevblogs.wpengine.com/visualstudio/introducing-scoped-api-keys/
 published: true
 post_date: 2017-02-02 00:00:00
 ---
@@ -28,6 +28,7 @@ Go to <https://int.nugettest.org> to try the feature. Since this is a staging en
 
     nuget.exe setApiKey [your API key] -Source https://int.nugettest.org/api/v2/package 
     nuget.exe push MyPackage.1.0.nupkg -Source https://int.nugettest.org/api/v2/package
+    
 
 Share your feedback with us via comments in the blog, filing a [Github issue][6] or sending an [email to our team][7].
 

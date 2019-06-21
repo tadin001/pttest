@@ -1,17 +1,17 @@
 ---
-ID: 94
+ID: 226064
 post_title: 'NuGet 3 &#8211; What and Why?'
-author: Jeffrey Fritz
+author: seroha
 post_excerpt: ""
 layout: post
 permalink: >
-  http://devblogs.microsoft.com/nuget/nuget-3-what-and-why/
+  https://qadevblogs.wpengine.com/visualstudio/nuget-3-what-and-why/
 published: true
 post_date: 2015-10-08 00:00:00
 ---
 Since Visual Studio 2015 was released in July, developers have started using a new version of NuGet, NuGet 3 We decided to introduce a number of significant changes based on feedback from the community. With any major version change, some things break… and usually for a good reason. We have bugs and issues that we are addressing and want to share what the plan was for versions 3.x and what the plan is for the future.
 
-The NuGet 2.x code base proved to be tightly coupling user interface and protocol. NuGet 3 included a major rewrite of the code base to allow for supporting the new V3 nuget server Protocol. 
+The NuGet 2.x code base proved to be tightly coupling user interface and protocol. NuGet 3 included a major rewrite of the code base to allow for supporting the new V3 nuget server Protocol.
 
 ## User Interface Changes
 
@@ -53,13 +53,13 @@ All in all, a number of really important updates for the user interface that add
 
 ## Update All
 
-The most significant removal from the NuGet user-interface was that 'Update All" was removed. After hearing from developers who were concerned about breaking changes introduced by a significant number of packages that were updated in their project, this button was not included in the revision. When there are a number of major package changes, developers found the resultant projects difficult to work with due to the number of breaking changes introduced by updated packages. 
+The most significant removal from the NuGet user-interface was that 'Update All" was removed. After hearing from developers who were concerned about breaking changes introduced by a significant number of packages that were updated in their project, this button was not included in the revision. When there are a number of major package changes, developers found the resultant projects difficult to work with due to the number of breaking changes introduced by updated packages.
 
-However, we also hear feedback from developers with more than 100 projects in a solution and are not able to update all of their packages quickly. The 'Update All' button is a significant help to these developers, and they experience a significant delay in their workflow when they need to update each package individually. For advanced users who prefer the Powershell console, the Update-Package command still provides 'Update All' functionality. We understand that having this in the user-interface is important to many developers and we're going to bring back the Update All button in our next user-interface update, scheduled for later this Fall. 
+However, we also hear feedback from developers with more than 100 projects in a solution and are not able to update all of their packages quickly. The 'Update All' button is a significant help to these developers, and they experience a significant delay in their workflow when they need to update each package individually. For advanced users who prefer the Powershell console, the Update-Package command still provides 'Update All' functionality. We understand that having this in the user-interface is important to many developers and we're going to bring back the Update All button in our next user-interface update, scheduled for later this Fall.
 
 ## NuGet v3 Protocol
 
-The NuGet.org service was based on an open WCF data service that allowed for virtually unlimited open-ended queries against a SQL database. The database server was at capacity and we were unable to scale it further without changing the implementation of the service. The new protocol was designed to be more responsive and be able to operate across content-delivery networks without communicating to a central database server. Package detail pages could be stored in a static JSON format on the web server and replicate across the NuGet CDN along with the packages. This would allow for developers to get updates to their packages from local edge nodes without querying the central NuGet.org service which is designed to reduce latency. 
+The NuGet.org service was based on an open WCF data service that allowed for virtually unlimited open-ended queries against a SQL database. The database server was at capacity and we were unable to scale it further without changing the implementation of the service. The new protocol was designed to be more responsive and be able to operate across content-delivery networks without communicating to a central database server. Package detail pages could be stored in a static JSON format on the web server and replicate across the NuGet CDN along with the packages. This would allow for developers to get updates to their packages from local edge nodes without querying the central NuGet.org service which is designed to reduce latency.
 
 In practice over the last 4 months, we have seen a reduction in NuGet.org server resources and a dramatic increase in the utilization of the CDN. From our telemetry, all regions that are using the new NuGet v3 protocol are experiencing a performance improvement. Since the beginning of the year, we see major improvements in server response, even though download traffic has doubled over the last 10 months.  
 ![Download Counts Over the Last 12 Months][4]
@@ -83,20 +83,20 @@ Introducing a new package reference model allowed us to address these issues by 
 
 To better show a developer's intent, we created the project.json dependencies feature where developers can directly reference only those packages that they need in their project. Any dependencies are automatically discovered and restored without needing to explicitly document those references in project.json
 
-![Project.JSON dependencies vs. Packages.config][6]   
+![Project.JSON dependencies vs. Packages.config][6]  
 **Project.json for a UWP project and a simulated packages.config showing some of the packages that would be referenced in the same project**
 
 The result is that you need to manage less package references and skip dealing with potential circular reference problems.
 
 ### Global Packages Folder
 
-With Project.JSON managed projects, there is now a packages folder that is shared for all projects that you work with. Packages are downloaded and stored in the `%userprofile%\.nuget\packages` folder. This means that if you are working on multiple UWP projects on your workstation, you only have one copy of the EntityFramework package and its dependencies on your machine. All .NET projects will acquire package references from this global shared folder. This also means that when you need to configure a new project, your project will not take time starting so that it can download a fresh copy of EntityFramework.nupkg Instead, it will simply and quickly reference the files you have already downloaded. ASP.NET 5 uses the `%userprofile%\.dnx\packages` folder and as that framework nears completion it will use the `%userprofile%\.nuget\packages` folder as well.
+With Project.JSON managed projects, there is now a packages folder that is shared for all projects that you work with. Packages are downloaded and stored in the `%userprofile%.nugetpackages` folder. This means that if you are working on multiple UWP projects on your workstation, you only have one copy of the EntityFramework package and its dependencies on your machine. All .NET projects will acquire package references from this global shared folder. This also means that when you need to configure a new project, your project will not take time starting so that it can download a fresh copy of EntityFramework.nupkg Instead, it will simply and quickly reference the files you have already downloaded. ASP.NET 5 uses the `%userprofile%.dnxpackages` folder and as that framework nears completion it will use the `%userprofile%.nugetpackages` folder as well.
 
 ### Powershell Install and Uninstall Scripts
 
 Powershell script support was modified to no longer execute install and uninstall scripts, but init scripts are still executed. Some of the reasoning for this is the inability to determine which package scripts need to be run when not all packages are directly referenced by a project. Without an explicit install or uninstall for a dependency package, it is impossible to determine when these scripts should be run. We do not believe there is a reliable and repeatable way to execute these scripts in this package reference model. Additionally, as we want to ensure that NuGet provides a repeatable experience on the command-line this forces packages to run without script capabilities. We plan to introduce features to address many of the common tasks that scripts provided.
 
-Additionally, running NuGet outside of Visual Studio at the command-line or on other operating systems cannot execute these Powershell scripts as they relied on Visual Studio automation. Powershell is in NuGet to provide a shim to allow for missing features to run inside of Visual Studio. Moving forward, we plan to introduce these features to provide this functionality. Finally, many of these scripts relied on Visual Studio APIs that could break across versions of Visual Studio. 
+Additionally, running NuGet outside of Visual Studio at the command-line or on other operating systems cannot execute these Powershell scripts as they relied on Visual Studio automation. Powershell is in NuGet to provide a shim to allow for missing features to run inside of Visual Studio. Moving forward, we plan to introduce these features to provide this functionality. Finally, many of these scripts relied on Visual Studio APIs that could break across versions of Visual Studio.
 
 ### Configuration File Transforms
 
@@ -108,7 +108,7 @@ With indirect package references, it is also not clear how to handle the content
 
 ## Looking Forward
 
-These changes that were introduced means that package authors and package consumers have some new decisions to make and new features to explore. We plan to provide more details on these topics in the weeks ahead. We will discuss the upcoming changes to the user interface, post walk-through tutorials demonstrating how to build new packages that target the Universal Windows Platform and how to update existing packages to make them available to the Universal Windows Platform. 
+These changes that were introduced means that package authors and package consumers have some new decisions to make and new features to explore. We plan to provide more details on these topics in the weeks ahead. We will discuss the upcoming changes to the user interface, post walk-through tutorials demonstrating how to build new packages that target the Universal Windows Platform and how to update existing packages to make them available to the Universal Windows Platform.
 
 ## Summary
 

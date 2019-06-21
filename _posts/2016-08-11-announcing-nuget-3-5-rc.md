@@ -1,11 +1,11 @@
 ---
-ID: 111
+ID: 226095
 post_title: Announcing NuGet 3.5 RC
-author: Harikrishna Menon
+author: seroha
 post_excerpt: ""
 layout: post
 permalink: >
-  http://devblogs.microsoft.com/nuget/announcing-nuget-3-5-rc/
+  https://qadevblogs.wpengine.com/visualstudio/announcing-nuget-3-5-rc/
 published: true
 post_date: 2016-08-11 00:00:00
 ---

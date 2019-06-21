@@ -1,11 +1,11 @@
 ---
-ID: 115
+ID: 226102
 post_title: Announcing NuGet 3.5 RTM
-author: Harikrishna Menon
+author: seroha
 post_excerpt: ""
 layout: post
 permalink: >
-  http://devblogs.microsoft.com/nuget/announcing-nuget-3-5-rtm/
+  https://qadevblogs.wpengine.com/visualstudio/announcing-nuget-3-5-rtm/
 published: true
 post_date: 2016-10-27 00:00:00
 ---

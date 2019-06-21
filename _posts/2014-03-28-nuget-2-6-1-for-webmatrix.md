@@ -1,11 +1,11 @@
 ---
-ID: 179
+ID: 225998
 post_title: NuGet 2.6.1 for WebMatrix
-author: Jeff Handley
+author: seroha
 post_excerpt: ""
 layout: post
 permalink: >
-  http://devblogs.microsoft.com/nuget/nuget-2-6-1-for-webmatrix/
+  https://qadevblogs.wpengine.com/visualstudio/nuget-2-6-1-for-webmatrix/
 published: true
 post_date: 2014-03-28 00:00:00
 ---

@@ -1,13 +1,13 @@
 ---
-ID: 138
+ID: 226149
 post_title: >
   Introducing Source Code Link for NuGet
   packages
-author: Maxime Rouiller
+author: seroha
 post_excerpt: ""
 layout: post
 permalink: >
-  http://devblogs.microsoft.com/nuget/introducing-source-code-link-for-nuget-packages/
+  https://qadevblogs.wpengine.com/visualstudio/introducing-source-code-link-for-nuget-packages/
 published: true
 post_date: 2018-08-27 00:00:00
 ---
@@ -15,7 +15,7 @@ NuGet.org now supports surfacing source code repository link for NuGet packages.
 
 ### Using `nuspec`
 
-If you are using a `nuspec` file for packaging, you will need to add a repository tag within your nuspec. For example, take a look at [NUnit's nuspec][3]: <package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd"> <metadata minClientVersion="2.12"> <!-- .. snipped ... --></metadata></package>
+If you are using a `nuspec` file for packaging, you will need to add a repository tag within your nuspec. For example, take a look at [NUnit's nuspec][3]: <!-- .. snipped ... -->
 
           <!-- Add this line and making the URL targets your project --> 
           <repository type="git" url="https://github.com/nunit/nunit" />
@@ -27,7 +27,7 @@ If you are using a `nuspec` file for packaging, you will need to add a repositor
 
 ### Using project file
 
-If you create your NuGet package directly with a project file, you will need to add a `RepositoryUrl` and a `RepositoryType` to the project file to enable this new feature on your package. Here's an example on how [RestSharp][4] implements it directly within their `csproj`. <project Sdk="Microsoft.NET.Sdk"> <propertygroup> <!-- .. snipped ... --></propertygroup></project>
+If you create your NuGet package directly with a project file, you will need to add a `RepositoryUrl` and a `RepositoryType` to the project file to enable this new feature on your package. Here's an example on how [RestSharp][4] implements it directly within their `csproj`. <!-- .. snipped ... -->
 
         <RepositoryUrl>https://github.com/restsharp/RestSharp.git</RepositoryUrl> 
         <RepositoryType>git</RepositoryType> 

@@ -1,11 +1,11 @@
 ---
-ID: 76
+ID: 226028
 post_title: Package Manifests
-author: Jeff Handley
+author: seroha
 post_excerpt: ""
 layout: post
 permalink: >
-  http://devblogs.microsoft.com/nuget/package-manifests/
+  https://qadevblogs.wpengine.com/visualstudio/package-manifests/
 published: true
 post_date: 2014-10-23 00:00:00
 ---
@@ -15,10 +15,10 @@ As we work on the designs for getting [NuGet in the platform][1], it has become 
 
 Since NuGet's initial release, it has supported conventional manifests and only a few concepts.
 
-1.  Assembly references from the `\lib` folder
-2.  Content files from the `\content` folder
-3.  PowerShell scripts from the `\tools` folder
-4.  MSBuild props/targets imports from the `\build` folder
+1.  Assembly references from the `lib` folder
+2.  Content files from the `content` folder
+3.  PowerShell scripts from the `tools` folder
+4.  MSBuild props/targets imports from the `build` folder
 5.  A `README.txt` file at the root of the package to be opened automatically after installation
 
 All other files inside the package are completely ignored and NuGet's existing design makes it difficult to expand on these concepts or introduce new ones.
@@ -27,13 +27,13 @@ Before we dive into where we think NuGet is going, let's look closer at what NuG
 
 ### Assembly References
 
-The `\lib` folder is reserved for assemblies that will get referenced by the project. During installation, NuGet gets the list of assemblies in the `\lib` folder and calls the Visual Studio API for adding an assembly reference to each.
+The `lib` folder is reserved for assemblies that will get referenced by the project. During installation, NuGet gets the list of assemblies in the `lib` folder and calls the Visual Studio API for adding an assembly reference to each.
 
 There are a couple of additional features this folder supports.
 
 #### Target Framework Selection
 
-If you provide a subfolder under `\lib` that matches a framework name we recognize, we use that as an applicability filter. When finding references from the package, we'll choose the best `\lib` folder for the project; if none of the folders match, then installation fails.
+If you provide a subfolder under `lib` that matches a framework name we recognize, we use that as an applicability filter. When finding references from the package, we'll choose the best `lib` folder for the project; if none of the folders match, then installation fails.
 
 #### Deployment-Only Assemblies
 
@@ -41,7 +41,7 @@ If your package needs to carry assemblies that are used only for deployment and 
 
 ### Content Files
 
-The `\content` folder includes content files that will be copied into the project, putting those files directly into the project itself. This is how jQuery and other JavaScript/CSS files get into your project from a NuGet package.
+The `content` folder includes content files that will be copied into the project, putting those files directly into the project itself. This is how jQuery and other JavaScript/CSS files get into your project from a NuGet package.
 
 This scenario has come under debate for a couple reasons. Many developers don't like that [NuGet packages get to specify where][2] in the project the content items will be placed. Others want to prevent the content files from getting copied into the project at all and [have Package Restore do the work instead][3].
 
@@ -49,7 +49,7 @@ Content files also support target framework filtering, XML [transformations for 
 
 ### PowerShell Scripts
 
-When a package carries an `install.ps1` file within its `\tools` folder, the script will be run after package installation. An `uninstall.ps1` is executed before uninstallation. Lastly, `init.ps1` is executed every time the solution is opened (assuming the NuGet PowerShell Console is open). Target framework filters apply to this folder too.
+When a package carries an `install.ps1` file within its `tools` folder, the script will be run after package installation. An `uninstall.ps1` is executed before uninstallation. Lastly, `init.ps1` is executed every time the solution is opened (assuming the NuGet PowerShell Console is open). Target framework filters apply to this folder too.
 
 The mere existence of this feature is a blocker for allowing package installation outside the Visual Studio context. These scripts are executed through our PowerShell Console within Visual Studio, they reference Visual Studio DTE API, and they rely on the MSBuild project being loaded and available.
 
@@ -57,7 +57,7 @@ This PowerShell capability has always been an escape hatch to allow a package to
 
 ### MSBuild Imports
 
-NuGet looks in the `\build` folder for props and targets files where the filename matches the package id. These are automatically imported into the project (at the top or bottom, respectively) using Visual Studio's DTE API and applying the target framework filtering. We add the imports in a way that is friendly for Package Restore, but the workflow still isn't great.
+NuGet looks in the `build` folder for props and targets files where the filename matches the package id. These are automatically imported into the project (at the top or bottom, respectively) using Visual Studio's DTE API and applying the target framework filtering. We add the imports in a way that is friendly for Package Restore, but the workflow still isn't great.
 
 This props/targets feature was added after we observed it was the most common use of PowerShell `install.ps1` scripts. But oddly enough, this feature itself is another escape hatch to allow a package to express something beyond the capabilities NuGet had for assembly references and content files!
 
@@ -87,7 +87,7 @@ When we look at the feedback we get from people who have invested heavily in usi
 1.  NuGet should resolve the assemblies at build-time instead of install-time
 2.  NuGet should let package consumers [control how content files are brought in][2] from packages, or [not bring them in][3] at all
 
-The feedback on the install-time actions goes all the way back to [NuGet's initial design][6] and this is being revisited as we move into the platform, at least for the handling of assemblies from the `\lib` folder.
+The feedback on the install-time actions goes all the way back to [NuGet's initial design][6] and this is being revisited as we move into the platform, at least for the handling of assemblies from the `lib` folder.
 
 It's time to revisit the fundamentals of what is carried inside a NuGet package and design a new package manifest.
 
@@ -123,12 +123,12 @@ As we explore producing an authoritative package manifest at the time of packing
 
 The most common scenario for packing today is when you have a `nuspec` file and then artifacts on disk. You run `nuget.exe pack` against your nuspec and you get the following result (ignoring the actual package contents):
 
-*   `id.version.nupkg`
+*   `id.version.nupkg` 
     *   `id.nuspec`
 
 With the proposal, the result would be changed to the following:
 
-*   `id.version.nupkg`
+*   `id.version.nupkg` 
     *   `id.nuspec`
     *   `nuget.manifest.json`
 
@@ -164,10 +164,9 @@ Are you tired of maintaining an XML-based `nuspec` file? Do you prefer JSON? Do 
   <a href="https://twitter.com/JeffHandley/status/522981703842021376">October 17, 2014</a>
 </blockquote>
 
-<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script> 
 If you want to take over manifest authoring, you'll be able to. Instead of creating a `nuspec` file, you would author a `nuget.json` file (or perhaps use ASP.NET's `project.json` file). Authoring in this format allows you to either retain the pack-time conventions that NuGet will apply or override them as needed. When the package would be created, it would then have the following files in it:
 
-*   `id.version.nupkg`
+*   `id.version.nupkg` 
     *   `id.nuspec`
     *   `nuget.json`
     *   `nuget.manifest.json`

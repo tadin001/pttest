@@ -1,11 +1,11 @@
 ---
-ID: 169
+ID: 225979
 post_title: NuGet 2.7 Package Restore Consent Errors
-author: Jeff Handley
+author: seroha
 post_excerpt: ""
 layout: post
 permalink: >
-  http://devblogs.microsoft.com/nuget/nuget-2-7-package-restore-consent-errors/
+  https://qadevblogs.wpengine.com/visualstudio/nuget-2-7-package-restore-consent-errors/
 published: true
 post_date: 2013-08-29 00:00:00
 ---
@@ -28,7 +28,7 @@ Package restore is disabled by default. To give consent, open the Visual Studio 
 
 As explained on the [Package Restore][1] documentation, there are three ways to address this situation.
 
-1.  **Force save your NuGet settings with consent given.** To do this, open Visual Studio's options and under Package Manager, choose General. Uncheck and then re-check the boxes for consent and click OK. This forces your %AppData%\NuGet\NuGet.config file to be saved with consent explicitly given, allowing NuGet 2.6 and earlier to see that you've given consent.
+1.  **Force save your NuGet settings with consent given.** To do this, open Visual Studio's options and under Package Manager, choose General. Uncheck and then re-check the boxes for consent and click OK. This forces your %AppData%NuGetNuGet.config file to be saved with consent explicitly given, allowing NuGet 2.6 and earlier to see that you've given consent.
 2.  **Update the version of NuGet.exe in your .nuget folder.** To do this, run `nuget.exe update -self` from your .nuget folder, which will download the latest version of NuGet.exe and replace the version in the .nuget folder. The latest version of NuGet.exe will infer consent to be ON even when not explicitly saved in the NuGet.config file.
 3.  **Migrate to Automatic Package Restore.** For this approach, you would migrate from the MSBuild-integrated package restore to the Automatic Package Restore approach, following the [documented walkthrough][2].
 

@@ -1,11 +1,11 @@
 ---
-ID: 98
+ID: 226034
 post_title: Package Signing
-author: Karan Nandwani
+author: seroha
 post_excerpt: ""
 layout: post
 permalink: >
-  http://devblogs.microsoft.com/nuget/package-signing/
+  https://qadevblogs.wpengine.com/visualstudio/package-signing/
 published: true
 post_date: 2015-02-03 00:00:00
 ---
@@ -52,9 +52,9 @@ In the future, whenever NuGet downloads that package for that project, it will d
 
 1.  If the signature for the package NuGet downloaded cannot be found, it will be rejected and an error will be raised.
 2.  If the signature for the package NuGet downloaded is invalid (hashes don't match), it will be rejected and an error will be raised.
-3.  If the package NuGet downloaded is not signed by the same publisher, it will be rejected and an error will be raised.
+3.  If the package NuGet downloaded is not signed by the same publisher, it will be rejected and an error will be raised. 
     1.  Note: We say "publisher" here not "key". The publisher can, and should, rotate keys frequently as good security practice. See the spec, linked at the end of this post, for more details on how we do this securely.
-4.  If the package NuGet downloaded is was signed by a certificate that was revoked or expired at the time it was signed, it will be rejected and an error will be raised
+4.  If the package NuGet downloaded is was signed by a certificate that was revoked or expired at the time it was signed, it will be rejected and an error will be raised 
     1.  Note: The time the signature was ***made*** is used here, ***not*** the time of verification. You won't have to reissue old packages just because your certificate expired. We will encourage the use of [Trusted Timestamping][5], which is a service provided for free by most issuers of code-signing certificates, to record the time of signing. This is very similar to how Authenticode deals with the same problem.
 
 This will also happen when NuGet updates the package. If the publisher has changed, the user warned about the change and given the option to approve it (similar to the way an SSH client presents the server's public key to the user for approval). As a NuGet publisher, it will be your responsibility to safeguard your key. If you lose your root certificate key, users will have to uninstall and reinstall your package when you release a new version with a new key. We will provide guidance and tools to backup your key in a secure manner.

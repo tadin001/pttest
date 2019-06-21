@@ -1,15 +1,15 @@
 ---
-ID: 110
+ID: 226093
 post_title: NuGet API key expiration
-author: Maarten Balliauw
+author: seroha
 post_excerpt: ""
 layout: post
 permalink: >
-  http://devblogs.microsoft.com/nuget/nuget-api-key-expiration/
+  https://qadevblogs.wpengine.com/visualstudio/nuget-api-key-expiration/
 published: true
 post_date: 2016-06-22 00:00:00
 ---
-**Update 6/22 (2:15 P.M PST): We have a lot of feedback coming in from the community on this topic. This change *will not have any impact for another 90 days at the minimum*. We are reviewing your feedback and will discuss further how to achieve our goal of improved security of NuGet.org. We will have an update within the next 45 days. To continue the dicussion, we have openend a new GitHub issue [here][1].** 
+**Update 6/22 (2:15 P.M PST): We have a lot of feedback coming in from the community on this topic. This change *will not have any impact for another 90 days at the minimum*. We are reviewing your feedback and will discuss further how to achieve our goal of improved security of NuGet.org. We will have an update within the next 45 days. To continue the dicussion, we have openend a new GitHub issue [here][1].**
 
 **EDIT** - Updates on this feature is available here - [Changes to Expiring API Keys][2]
 

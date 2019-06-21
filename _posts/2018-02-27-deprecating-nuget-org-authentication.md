@@ -1,11 +1,11 @@
 ---
-ID: 128
+ID: 226129
 post_title: Deprecating NuGet.org authentication
-author: Anand Gaurav
+author: seroha
 post_excerpt: ""
 layout: post
 permalink: >
-  http://devblogs.microsoft.com/nuget/deprecating-nuget-org-authentication/
+  https://qadevblogs.wpengine.com/visualstudio/deprecating-nuget-org-authentication/
 published: true
 post_date: 2018-02-27 00:00:00
 ---

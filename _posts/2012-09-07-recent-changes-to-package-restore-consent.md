@@ -1,17 +1,17 @@
 ---
-ID: 59
+ID: 225931
 post_title: >
   Recent Changes to Package Restore
   Consent
-author: Howard Dierking
+author: seroha
 post_excerpt: ""
 layout: post
 permalink: >
-  http://devblogs.microsoft.com/nuget/recent-changes-to-package-restore-consent/
+  https://qadevblogs.wpengine.com/visualstudio/recent-changes-to-package-restore-consent/
 published: true
 post_date: 2012-09-07 00:00:00
 ---
-When we released NuGet 2.0, one of the changes included the addition of a [privacy-related constraint][1] to the package restore feature. More specifically, NuGet 2.0 required that you provide explicit consent, via either a checkbox in the package manager configuration dialog or an environment variable, before it would successfully download required packages as a part of the package restore workflow. 
+When we released NuGet 2.0, one of the changes included the addition of a [privacy-related constraint][1] to the package restore feature. More specifically, NuGet 2.0 required that you provide explicit consent, via either a checkbox in the package manager configuration dialog or an environment variable, before it would successfully download required packages as a part of the package restore workflow.
 
 The constraint was added specifically with build scenarios in mind. However, the implementation extended to other scenarios and as a result, added some unhappiness to the overall NuGet experience. Therefore, we’ve revisited the implementation and limited its impact to only the scenario that it was designed to address and none other.
 

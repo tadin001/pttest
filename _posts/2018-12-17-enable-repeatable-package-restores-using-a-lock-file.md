@@ -1,13 +1,13 @@
 ---
-ID: 141
+ID: 226155
 post_title: >
   Enable repeatable package restores using
   a lock file
-author: Anand Gaurav
+author: seroha
 post_excerpt: ""
 layout: post
 permalink: >
-  http://devblogs.microsoft.com/nuget/enable-repeatable-package-restores-using-a-lock-file/
+  https://qadevblogs.wpengine.com/visualstudio/enable-repeatable-package-restores-using-a-lock-file/
 published: true
 post_date: 2018-12-17 00:00:00
 ---
@@ -55,9 +55,9 @@ NuGet does a quick check to see if there were any changes in the package depende
 
 **Continuous Integration (CI/CD) and other build scenarios**, where you would **always** want the same repeatable `restore`, you should use the **locked mode**. You can get into the locked mode by setting the MSBuild property `RestoreLockedMode` to `true`:
 
-<pre class="highlight"><code>&lt;span class="nt">&lt;PropertyGroup&gt;&lt;/span>
-       &lt;span class="nt">&lt;RestoreLockedMode&lt;/span> &lt;span class="na">Condition=&lt;/span>&lt;span class="s">"'$(ContinuousIntegrationBuild)' == 'true'"&lt;/span>&lt;span class="nt">&gt;&lt;/span>true&lt;span class="nt">&lt;/RestoreLockedMode&gt;&lt;/span>
-&lt;span class="nt">&lt;/PropertyGroup&gt;&lt;/span> </code></pre>
+<pre class="highlight"><code>&lt;span class="nt"&gt;&lt;PropertyGroup&gt;&lt;/span&gt;
+       &lt;span class="nt"&gt;&lt;RestoreLockedMode&lt;/span&gt; &lt;span class="na"&gt;Condition=&lt;/span&gt;&lt;span class="s"&gt;"'$(ContinuousIntegrationBuild)' == 'true'"&lt;/span&gt;&lt;span class="nt"&gt;&gt;&lt;/span&gt;true&lt;span class="nt"&gt;&lt;/RestoreLockedMode&gt;&lt;/span&gt;
+&lt;span class="nt"&gt;&lt;/PropertyGroup&gt;&lt;/span&gt; </code></pre>
 
 **Note:** The above example assumes you have a MSBuild property `ContinuousIntegrationBuild` that is set to `true` for CI/CD builds. Alternatively, for CI/CD builds, you can use the following command line options to enable locked mode: For dotnet.exe, run:
 

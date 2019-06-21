@@ -1,11 +1,11 @@
 ---
-ID: 101
+ID: 226076
 post_title: NuGet ContentFiles Demystified
-author: Jeffrey Fritz
+author: seroha
 post_excerpt: ""
 layout: post
 permalink: >
-  http://devblogs.microsoft.com/nuget/nuget-contentfiles-demystified/
+  https://qadevblogs.wpengine.com/visualstudio/nuget-contentfiles-demystified/
 published: true
 post_date: 2016-01-26 00:00:00
 ---
@@ -27,7 +27,7 @@ When placing content into the `contentFiles` folder, we have some options to hel
 
 1 Language (vb, cs, fs) 2 Target Framework Moniker or TFM (net35, wp81, etc)
 
-Either of these can be replaced with the catch-all `any` name in order to deliver content to all languages or framework types. In the case of our logo, we would like it to be delivered for all languages and for any framework type therefore we will place the logo in the `contentFiles\any\any` folder.
+Either of these can be replaced with the catch-all `any` name in order to deliver content to all languages or framework types. In the case of our logo, we would like it to be delivered for all languages and for any framework type therefore we will place the logo in the `contentFilesanyany` folder.
 
 ## Supported Project Types
 
@@ -46,27 +46,31 @@ A first example that we can look at would be to include a png of your organizati
 
 ### Step 1 - Create a contentFiles folder.
 
-We like to work in `c:\dev`, so lets create a project folder called `ContentFilesExample` and place a folder underneath it to hold our content.
+We like to work in `c:dev`, so lets create a project folder called `ContentFilesExample` and place a folder underneath it to hold our content.
 
-    c:\dev\ContentFilesExample\contentFiles
+    c:devContentFilesExamplecontentFiles
+    
 
 ### Step 2 - Add a branding image
 
 Create the following folder structure:
 
-    c:\dev\ContentFilesExample\contentFiles\any\any\images\
+    c:devContentFilesExamplecontentFilesanyanyimages
+    
 
-Notice: We followed the procedure discussed above for our folder structure. The first "any" folder is the language. The second "any" folder is the target framework. We could have been more specific and something like used `cs\net40` to apply the contents to projects using c-sharp in .NET 4.0. Also, to make it even clearer that this is an image, we added an images folder.
+Notice: We followed the procedure discussed above for our folder structure. The first "any" folder is the language. The second "any" folder is the target framework. We could have been more specific and something like used `csnet40` to apply the contents to projects using c-sharp in .NET 4.0. Also, to make it even clearer that this is an image, we added an images folder.
 
 Put an image into that folder. In this example, our image is called dnf.png.
 
-    c:\dev\ContentFilesExample\contentFiles\any\any\images\dnf.png
+    c:devContentFilesExamplecontentFilesanyanyimagesdnf.png
+    
 
 ### Step 3 - Create the contentFilesExample.nuspec and add appropriate Xml
 
 Let's create the nuspec manifest file for this package and populate it with the information NuGet needs. We can create and place this file at:
 
-    c:\dev\ContentFilesExample\ContentFilesExample.nuspec
+    c:devContentFilesExampleContentFilesExample.nuspec
+    
 
 Next, we need to author the nuspec appropriately to deliver this image with an EmbeddedResource action. A minimum nuspec document for this package may look like the following:
 
@@ -94,17 +98,20 @@ Notice the file-globbing pattern on the `files/@include` attribute. We have a lo
 
 You may need to download nuget.exe to do this from here: [Download NuGet][2].
 
-For this example, we put a copy of nuget.exe in the `c:\dev\ContentFilesExample\` folder.
+For this example, we put a copy of nuget.exe in the `c:devContentFilesExample` folder.
 
-    c:\dev\ContentFilesExample\nuget.exe
+    c:devContentFilesExamplenuget.exe
+    
 
 Open a command prompt and run the following:
 
-    cd c:\dev\ContentFilesExample nuget.exe pack ContentFilesExample.nuspec
+    cd c:devContentFilesExample nuget.exe pack ContentFilesExample.nuspec
+    
 
 This createas your nuget package and names it ContentFilesExample.1.0.0.nupkg
 
-    c:\dev\ContentFilesExample\ContentFilesExample.1.0.0.nupkg
+    c:devContentFilesExampleContentFilesExample.1.0.0.nupkg
+    
 
 ### Step 5 - Install the nuget package
 
@@ -114,8 +121,8 @@ This createas your nuget package and names it ContentFilesExample.1.0.0.nupkg
 4.  Name it and click OK. For this example, we will leave the default name of ClassLibrary1.
 5.  Now go to Tools | NuGet Package Manager | Package Manager Console.
 6.  Run this command:
-
-    Install-Package ContentFilesExample -source c:\dev\ContentFilesExample
+    
+    Install-Package ContentFilesExample -source c:devContentFilesExample
 
 You should see the image added to your project.
 
@@ -123,9 +130,10 @@ You should see the image added to your project.
 
 The `contentFiles` elements in the nuspec are pointers to files that exist inside the package. We can also use the [standard NuGet files element][3] to move items from outside of the package folder hierarchy into the package. Lets start using that markup to add a CS file into the package. I can add a file called `ExampleInternals.cs` to the root of my package folder so that the file structure on disk is:
 
-    c:\dev\ContentFilesExample\ContentFilesExample.nuspec 
-    c:\dev\ContentFilesExample\ExampleInternals.cs 
-    c:\dev\ContentFilesExample\contentFiles\any\any\images\dnf.png
+    c:devContentFilesExampleContentFilesExample.nuspec 
+    c:devContentFilesExampleExampleInternals.cs 
+    c:devContentFilesExamplecontentFilesanyanyimagesdnf.png
+    
 
 My nuspec will now be modified to contain the following:
 
@@ -146,8 +154,8 @@ My nuspec will now be modified to contain the following:
    &lt;/contentFiles&gt; 
   &lt;/metadata&gt; 
   &lt;files&gt; 
-    &lt;file src="contentFiles\**" target="contentFiles" /&gt; 
-    &lt;file src="ExampleInternals.cs" target="contentFiles\cs\any" /&gt; 
+    &lt;file src="contentFiles**" target="contentFiles" /&gt; 
+    &lt;file src="ExampleInternals.cs" target="contentFilescsany" /&gt; 
   &lt;/files&gt; 
 &lt;/package&gt;</code></pre>
 

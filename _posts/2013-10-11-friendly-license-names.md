@@ -1,21 +1,21 @@
 ---
-ID: 172
+ID: 225985
 post_title: Friendly License Names
-author: Howard Dierking
+author: seroha
 post_excerpt: ""
 layout: post
 permalink: >
-  http://devblogs.microsoft.com/nuget/friendly-license-names/
+  https://qadevblogs.wpengine.com/visualstudio/friendly-license-names/
 published: true
 post_date: 2013-10-11 00:00:00
 ---
 Yesterday afternoon, we enabled a new feature for both the NuGet gallery and the Visual Studio client (for NuGet >= 2.7) which will display the list of license names for a package in addition to simply providing a link to the license text. The big idea behind this feature is that it will aid in the decision making process over whether or not to use a package.
 
-While displaying text such as "MIT" may seem like a trivial problem, there is a significant amount of complexity involved in determining the name from a license document. In this feature, license names are determined as a result of analyzing the license text itself. 
+While displaying text such as "MIT" may seem like a trivial problem, there is a significant amount of complexity involved in determining the name from a license document. In this feature, license names are determined as a result of analyzing the license text itself.
 
 For this analysis, [NuGet has partnered with Sonatype][1] and leveraged the power of their component lifecycle management (CLM) system. You may remember that in early 2012, Sonatype began enabling polyglot development shops to manage both their Java and .NET components with one repository when they [included NuGet support in their Nexus repository][2]. As such, when Sonatype released CLM, it seemed only natural that we leverage our partnership to bring some of the power of that system to the NuGet community.
 
-While there’s a lot happening behind the scenes, browsing license names shows up in some pretty simple ways in the NuGet clients. 
+While there’s a lot happening behind the scenes, browsing license names shows up in some pretty simple ways in the NuGet clients.
 
 On the gallery, you can see license names in search results or package listings:
 

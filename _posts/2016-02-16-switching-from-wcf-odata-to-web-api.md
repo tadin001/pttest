@@ -1,11 +1,11 @@
 ---
-ID: 102
+ID: 226078
 post_title: Switching from WCF OData to Web API
-author: Maarten Balliauw
+author: seroha
 post_excerpt: ""
 layout: post
 permalink: >
-  http://devblogs.microsoft.com/nuget/switching-from-wcf-odata-to-web-api/
+  https://qadevblogs.wpengine.com/visualstudio/switching-from-wcf-odata-to-web-api/
 published: true
 post_date: 2016-02-16 00:00:00
 ---

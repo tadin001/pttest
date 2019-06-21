@@ -1,11 +1,11 @@
 ---
-ID: 157
+ID: 225956
 post_title: NuGet 2.5 Released
-author: Jeff Handley
+author: seroha
 post_excerpt: ""
 layout: post
 permalink: >
-  http://devblogs.microsoft.com/nuget/nuget-2-5-released/
+  https://qadevblogs.wpengine.com/visualstudio/nuget-2-5-released/
 published: true
 post_date: 2013-04-25 00:00:00
 ---
@@ -43,7 +43,7 @@ For details about what's in the release, the [release notes][23] are published o
 
 1.  Allow users to overwrite content files that already exist
 2.  Automatic import of msbuild targets and props files
-3.  Specify different references per platform using <references></references> element
+3.  Specify different references per platform using element
 4.  Update All button to allow updating all packages at once
 5.  Improved project reference support for NuGet.exe Pack
 6.  Add a 'Minimum NuGet Version' property to packages

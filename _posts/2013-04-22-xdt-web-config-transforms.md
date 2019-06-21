@@ -1,11 +1,11 @@
 ---
-ID: 156
+ID: 225954
 post_title: XDT web.config transforms
-author: Jeff Handley
+author: seroha
 post_excerpt: ""
 layout: post
 permalink: >
-  http://devblogs.microsoft.com/nuget/xdt-web-config-transforms/
+  https://qadevblogs.wpengine.com/visualstudio/xdt-web-config-transforms/
 published: true
 post_date: 2013-04-22 00:00:00
 ---

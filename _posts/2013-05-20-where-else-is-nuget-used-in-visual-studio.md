@@ -1,17 +1,17 @@
 ---
-ID: 161
+ID: 225964
 post_title: >
   Where else is NuGet used in Visual
   Studio?
-author: Luan Nguyen
+author: seroha
 post_excerpt: ""
 layout: post
 permalink: >
-  http://devblogs.microsoft.com/nuget/where-else-is-nuget-used-in-visual-studio/
+  https://qadevblogs.wpengine.com/visualstudio/where-else-is-nuget-used-in-visual-studio/
 published: true
 post_date: 2013-05-20 00:00:00
 ---
-All NuGet users are probably familiar with both the Manage NuGet Packages dialog and the Package Manager Console. These are the main user interfaces for installing and managing packages. 
+All NuGet users are probably familiar with both the Manage NuGet Packages dialog and the Package Manager Console. These are the main user interfaces for installing and managing packages.
 
 However, NuGet is also used in a couple of more subtle places. Below are a few of them that I am aware of. With the exception of the New Project dialog, these dialogs/commands invoke NuGet through the [well-documented MEF services][1] that NuGet exports.
 

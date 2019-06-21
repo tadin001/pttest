@@ -1,15 +1,15 @@
 ---
-ID: 99
+ID: 226072
 post_title: Accelerate your NuGet.Server
-author: Maarten Balliauw
+author: seroha
 post_excerpt: ""
 layout: post
 permalink: >
-  http://devblogs.microsoft.com/nuget/accelerate-your-nuget-server/
+  https://qadevblogs.wpengine.com/visualstudio/accelerate-your-nuget-server/
 published: true
 post_date: 2016-01-13 00:00:00
 ---
-Since its inception, NuGet supports setting up custom package sources. There's the default [NuGet Gallery][1], there's third-party NuGet hosting (see the [NuGet Ecosystem][2]), we can use local directories on our hard drive or a network UNC share (like `&#92;yourserver\nuget`) and there's the [NuGet.Server][3] package that we can use to create our own NuGet server.
+Since its inception, NuGet supports setting up custom package sources. There's the default [NuGet Gallery][1], there's third-party NuGet hosting (see the [NuGet Ecosystem][2]), we can use local directories on our hard drive or a network UNC share (like `&#092;yourservernuget`) and there's the [NuGet.Server][3] package that we can use to create our own NuGet server.
 
 Developers and teams have been using NuGet.Server to host and share their NuGet packages internally without exposing them publicly on nuget.org. It's easy to set up: [install a NuGet package][4] and we can work with our own NuGet server over HTTP(S).
 
@@ -25,6 +25,7 @@ Up until [version 2.8.6][5] the NuGet.Server package has been using a flat folde
     ~/packages/PackageA.1.0.1.nupkg 
     ~/packages/PackageB.0.0.1-beta.nupkg 
     ~/packages/PackageB.0.0.1.nupkg
+    
 
 When accessing NuGet.Server, these packages (which are actually zip archives) would all be unzipped to a temporary folder to extract their metadata so that it could be served up on the exposed NuGet feed. This extraction would happen whenever NuGet.Server's application pool was restarted as well as right after a package was pushed. To make things worse, each package would be read a second time to calculate the package hash which is surfaced in the NuGet feed. Bottom line: high-churn feeds with many packages were doing more unzipping than serving packages.
 
@@ -36,6 +37,7 @@ After we [introduced a new, expanded folder format][6] for directory based NuGet
                     /PackageA.1.0.0.nupkg 
                     /PackageA.nuspec 
                     /PackageA.1.0.0.nupkg.sha512
+    
 
 In this structure, every package is analyzed when pushed to the server. Of course, the .nupkg is stored so it can be served to the client. Next to the package, we extract the .nuspec containing the package's metadata and write the package hash to disk as well.
 
@@ -47,9 +49,7 @@ Why stop there? While we were at it, we decided we could also persist the in-mem
 
 Of course we did some tests before and after upgrading NuGet.Server. Here are the results on an i7 with SSD:
 
-<style>
-  table, th, td { border: 1px solid black; border-collapse: collapse; } th, td { padding: 5px; }
-</style>
+table, th, td { border: 1px solid black; border-collapse: collapse; } th, td { padding: 5px; } 
 
 <table>
   <thead>
@@ -175,6 +175,7 @@ Your results of course will vary, based on the number of package IDs, versions p
 It all starts with [creating a remote NuGet feed with NuGet.Server][4]. In short, all we have to do is create an empty web application and install a NuGet package.
 
 > **Important:** The accelerated [NuGet.Server package][7] is still in preview. Make sure to tick the "Include prereleases" box in Visual Studio's NuGet dialog or use `Install-Package NuGet.Server -Pre` to install / `Update-Package NuGet.Server -Pre` to update an existing NuGet.Server.
+
 ### Upgrading
 
 To upgrade an existing NuGet.Server we can update the NuGet.Server package in our project.
@@ -182,7 +183,7 @@ To upgrade an existing NuGet.Server we can update the NuGet.Server package in ou
 After the upgrade, the first start of the application will convert the flat packages folder structure into the expanded folder structure. If there are many packages on the server, this first launch may take a while (we've seen 6 minutes for 6,000 packages for this first launch). To overcome this performance hit, stop the server, [download the NuGet.exe command line 3.3+][8] and run the following commands:
 
     REM Navigate to NuGet.Server web root 
-    cd c:\path\to\nuget.server 
+    cd c:pathtonuget.server 
     
     REM Copy the existing packages folder to a backup folder 
     xcopy packages packages-backup /E /I /Q /H /Y 
@@ -192,6 +193,7 @@ After the upgrade, the first start of the application will convert the flat pack
     
     REM Let NuGet.exe initialize the expanded folder structure 
     nuget init packages-backup packages
+    
 
 Once finished we can launch NuGet.Server using the new package folder structure. Note the `packages-backup` folder can be removed after succesfully launching the NuGet.Server.
 
@@ -205,10 +207,12 @@ There are two ways of uploading packages to NuGet.Server:
 To upload packages using the NuGet.exe command line, make sure NuGet.Server has an API key set. For example add the following in Web.config:
 
     <add key="apiKey" value="SooperS3cr3t"/>
+    
 
 Once added, we can use NuGet.exe to upload packages to our NuGet server:
 
     nuget push MyPackage.nupkg SooperS3cr3t -Source http://url.to.server
+    
 
 Another way of uploading packages is by copying the NuGet package to the root of the packages folder. The root acts as a "drop folder": NuGet.Server will automatically pick up the package and store it in the expanded folder format.
 

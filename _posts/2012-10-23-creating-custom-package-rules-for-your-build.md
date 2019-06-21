@@ -1,13 +1,13 @@
 ---
-ID: 146
+ID: 225935
 post_title: >
   Creating custom package rules for your
   build
-author: Luan Nguyen
+author: seroha
 post_excerpt: ""
 layout: post
 permalink: >
-  http://devblogs.microsoft.com/nuget/creating-custom-package-rules-for-your-build/
+  https://qadevblogs.wpengine.com/visualstudio/creating-custom-package-rules-for-your-build/
 published: true
 post_date: 2012-10-23 00:00:00
 ---
@@ -35,14 +35,10 @@ What is not very well-known is that the rule set is extensible, meaning that you
 2.  Add an assembly reference to **nuget.exe**. You need it for the package rule types. In the Properties window, set both *Copy Local* and *Specific Version* to **False**, because we don't want to deploy **nuget.exe** together with our extension assembly.
 3.  Add another assembly reference to **System.ComponentModel.Composition**. You need this because the analysis mechanism is based on **[MEF][2]**.
 4.  Now add a class to your project for each rule you want to create. A rule class must derive from the `NuGet.IPackageRule` interface, and must export it using the MEF `Export` attribute.
-
-     [Export(typeof(IPackageRule))] 
-      public class PackageIdRule : IPackageRule 
-     {
+    
+    [Export(typeof(IPackageRule))] public class PackageIdRule : IPackageRule {
 
 }
-
-    
 
 Here's the definition of the `IPackageRule` interface:
 
@@ -50,6 +46,7 @@ Here's the definition of the `IPackageRule` interface:
     { 
       IEnumerable<PackageIssue> Validate(IPackage package); 
     } 
+    
 
 As you can see, it has only one simple `Validate` method, which receives an instance of the package that has just been built. The method will examine the package and return all the issues that it finds. An issue is represented by an instance of the `PackageIssue` class.
 
@@ -59,17 +56,14 @@ As you can see, it has only one simple `Validate` method, which receives an inst
      public PackageIssue(string title, string description, string solution);
      public PackageIssue(string title, string description, string solution, PackageIssueLevel level);
     
-
+    
      public string Description { get; }
      public PackageIssueLevel Level { get; } 
      public string Solution { get; } 
      public string Title { get; }
-
     
 
 }
-
-    
 
 Each issue has a Title, a Description, a Level, which can be either Warning or Error, and a proposed Solution. Note: currently, **nuget.exe** ignores the Level property and reports all issues as Warning.
 
@@ -85,12 +79,13 @@ Here's the `Validate` method that we wrote for the previously mentioned rule to 
            solution: "Rename the Id attribute so that it starts with 'Microsoft.AspNet.*'"); 
          } 
     } 
+    
 
 ### Deploy rule assembly
 
 After you've successfully compiled the project, you need to put the assembly into the right place. **nuget.exe** looks for extension assemblies in three places:
 
-*   The **%localappdata%\nuget\commands** directory.
+*   The **%localappdata%nugetcommands** directory.
 *   The current directory from which **nuget.exe** runs. Important: In this case, your assembly's name must end with **Extensions.dll**, or else **nuget.exe** will ignore it.
 *   A list of directories as specified by the **NUGET_EXTENSIONS_PATH** environment variable, separated by commas.
 

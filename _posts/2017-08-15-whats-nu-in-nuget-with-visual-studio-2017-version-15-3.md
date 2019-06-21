@@ -1,11 +1,11 @@
 ---
-ID: 181
+ID: 226121
 post_title: 'What&#8217;s Nu in NuGet with Visual Studio 2017 version 15.3?'
-author: Anand Gaurav
+author: seroha
 post_excerpt: ""
 layout: post
 permalink: >
-  http://devblogs.microsoft.com/nuget/whats-nu-in-nuget-with-visual-studio-2017-version-15-3/
+  https://qadevblogs.wpengine.com/visualstudio/whats-nu-in-nuget-with-visual-studio-2017-version-15-3/
 published: true
 post_date: 2017-08-15 16:17:19
 ---
@@ -55,19 +55,19 @@ If you are okay with the risk as stated by the warning and do not want to see it
 
 To suppress the warning, you can go to the package properties window and add
 
-[NU1701][15] to the NoWarn property: ![Suppress warning for package reference][16] This results in the following entry being created in the project file: <packagereference Include="RestSharp" Version="105.2.3"> <nowarn>NU1701</nowarn> </packagereference>
+[NU1701][15] to the NoWarn property: ![Suppress warning for package reference][16] This results in the following entry being created in the project file: NU1701 
 
 #### Suppress the warning at a project level
 
 If you do not want to see the warning at all in the project irrespective of the package reference that introduces it, you can suppress it in the project’s build properties:
 
-![Suppress warning at a project level][17] This results in the following entry being created in the project file: <propertygroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'"> <nowarn>NU1701</nowarn> </propertygroup>
+![Suppress warning at a project level][17] This results in the following entry being created in the project file: NU1701 
 
 #### Elevate a warning to an error
 
 In case you want to elevate a specific warning to an error, you can do so by specifying the same in the Build properties:
 
-![Elevate warning to error][18] This results in the following entry being created in the project file: <propertygroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'"> <warningsaserrors>NU1605</warningsaserrors> </propertygroup>
+![Elevate warning to error][18] This results in the following entry being created in the project file: NU1605 
 
 #### A word of caution!
 

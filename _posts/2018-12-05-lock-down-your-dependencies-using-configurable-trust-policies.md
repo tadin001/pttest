@@ -1,13 +1,13 @@
 ---
-ID: 140
+ID: 226153
 post_title: >
   Lock down your dependencies using
   configurable trust policies
-author: Rido
+author: seroha
 post_excerpt: ""
 layout: post
 permalink: >
-  http://devblogs.microsoft.com/nuget/lock-down-your-dependencies-using-configurable-trust-policies/
+  https://qadevblogs.wpengine.com/visualstudio/lock-down-your-dependencies-using-configurable-trust-policies/
 published: true
 post_date: 2018-12-05 00:00:00
 ---
@@ -62,12 +62,12 @@ The following `nuget.config` file uses `require` mode and trusts packages in NuG
 
   &lt;config&gt;
     &lt;add key="signatureValidationMode" value="require" /&gt;    
-    &lt;add key="globalPackagesFolder" value="%USERPROFILE%\.nuget\TrustedPackages" /&gt;
+    &lt;add key="globalPackagesFolder" value="%USERPROFILE%.nugetTrustedPackages" /&gt;
   &lt;/config&gt;
 
  &lt;packageSources&gt;
     &lt;clear /&gt;
-    &lt;add key="local" value="\\myserver\packages\" /&gt;
+    &lt;add key="local" value="\myserverpackages" /&gt;
     &lt;add key="nuget" value="https://api.nuget.org/v3/index.json" /&gt;
  &lt;/packageSources&gt;
 

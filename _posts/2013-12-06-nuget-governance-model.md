@@ -1,11 +1,11 @@
 ---
-ID: 177
+ID: 225994
 post_title: NuGet Governance Model
-author: Howard Dierking
+author: seroha
 post_excerpt: ""
 layout: post
 permalink: >
-  http://devblogs.microsoft.com/nuget/nuget-governance-model/
+  https://qadevblogs.wpengine.com/visualstudio/nuget-governance-model/
 published: true
 post_date: 2013-12-06 00:00:00
 ---

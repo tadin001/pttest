@@ -1,11 +1,11 @@
 ---
-ID: 136
+ID: 226145
 post_title: NuGet Summer 2018 Roadmap
-author: Anand Gaurav
+author: seroha
 post_excerpt: ""
 layout: post
 permalink: >
-  http://devblogs.microsoft.com/nuget/nuget-summer-2018-roadmap/
+  https://qadevblogs.wpengine.com/visualstudio/nuget-summer-2018-roadmap/
 published: true
 post_date: 2018-07-02 00:00:00
 ---

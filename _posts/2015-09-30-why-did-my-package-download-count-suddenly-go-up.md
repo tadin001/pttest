@@ -1,13 +1,13 @@
 ---
-ID: 92
+ID: 226061
 post_title: >
   Why did my package download count
   suddenly go up
-author: Maarten Balliauw
+author: seroha
 post_excerpt: ""
 layout: post
 permalink: >
-  http://devblogs.microsoft.com/nuget/why-did-my-package-download-count-suddenly-go-up/
+  https://qadevblogs.wpengine.com/visualstudio/why-did-my-package-download-count-suddenly-go-up/
 published: true
 post_date: 2015-09-30 00:00:00
 ---

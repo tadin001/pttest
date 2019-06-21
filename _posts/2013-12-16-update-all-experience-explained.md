@@ -1,11 +1,11 @@
 ---
-ID: 178
+ID: 225996
 post_title: Update All Experience Explained
-author: Deepak Aravindakshan
+author: seroha
 post_excerpt: ""
 layout: post
 permalink: >
-  http://devblogs.microsoft.com/nuget/update-all-experience-explained/
+  https://qadevblogs.wpengine.com/visualstudio/update-all-experience-explained/
 published: true
 post_date: 2013-12-16 00:00:00
 ---

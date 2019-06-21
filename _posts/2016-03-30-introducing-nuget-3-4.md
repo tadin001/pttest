@@ -1,11 +1,11 @@
 ---
-ID: 104
+ID: 226081
 post_title: Introducing NuGet 3.4
-author: Jeffrey Fritz
+author: seroha
 post_excerpt: ""
 layout: post
 permalink: >
-  http://devblogs.microsoft.com/nuget/introducing-nuget-3-4/
+  https://qadevblogs.wpengine.com/visualstudio/introducing-nuget-3-4/
 published: true
 post_date: 2016-03-30 00:00:00
 ---
@@ -23,8 +23,7 @@ We think you'll find these updates a welcome change that improves your day-to-da
 
 In the 3.4RC we previously discussed the performance improvements in the UI. We've taken those performance updates and added a few more things that we know you'll be happy to see. Check this video for a quick tour of the new enhancements:
 
-<div style="text-align: center; width: 100%">
-  <iframe width="420" height="315" src="https://www.youtube.com/embed/W6quyUV-cxY" frameborder="0" allowfullscreen></iframe>
+<div style="text-align: center;width: 100%">
 </div>
 
 That video is not edited or enhanced for speed, that is real-time search and updates performance from outside of the pristine Microsoft networks. The package lists on the Updates tab are now sorted alphabetically and the 'All Sources' aggregate NuGet source are available for you to search across in the user-interface.

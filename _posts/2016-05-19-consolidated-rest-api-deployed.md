@@ -1,11 +1,11 @@
 ---
-ID: 109
+ID: 226091
 post_title: Consolidated REST API deployed
-author: Maarten Balliauw
+author: seroha
 post_excerpt: ""
 layout: post
 permalink: >
-  http://devblogs.microsoft.com/nuget/consolidated-rest-api-deployed/
+  https://qadevblogs.wpengine.com/visualstudio/consolidated-rest-api-deployed/
 published: true
 post_date: 2016-05-19 00:00:00
 ---

@@ -1,13 +1,13 @@
 ---
-ID: 60
+ID: 225933
 post_title: >
   Invoking NuGet Services from inside
   Visual Studio
-author: Luan Nguyen
+author: seroha
 post_excerpt: ""
 layout: post
 permalink: >
-  http://devblogs.microsoft.com/nuget/invoking-nuget-services-from-inside-visual-studio/
+  https://qadevblogs.wpengine.com/visualstudio/invoking-nuget-services-from-inside-visual-studio/
 published: true
 post_date: 2012-09-26 00:00:00
 ---
@@ -35,20 +35,18 @@ Instead I will show you a step-by-step guide on how to reference the interfaces 
 
 1.  #### First, install the **NuGet.VisualStudio** nuget package into your project
     
-    The **[NuGet.VisualStudio][2]** package contains the NuGet.VisualStudio.dll assembly which includes all the above interfaces.  
-      
-    When installed, the package will automatically set the **Embed Interop Types** property of the assembly reference to **True**. The reason it does so is to make your code resilient against version changes when users update to newer versions of NuGet.  
-      
-    For the same reason, you must NOT use any other types besides the above interfaces in your code. You must NOT reference any other NuGet assemblies either, including **NuGet.Core.dll**.  
-      
-    ![Embed Interop Types set to True][3]  
-      
+    The **[NuGet.VisualStudio][2]** package contains the NuGet.VisualStudio.dll assembly which includes all the above interfaces.
     
+    When installed, the package will automatically set the **Embed Interop Types** property of the assembly reference to **True**. The reason it does so is to make your code resilient against version changes when users update to newer versions of NuGet.
+    
+    For the same reason, you must NOT use any other types besides the above interfaces in your code. You must NOT reference any other NuGet assemblies either, including **NuGet.Core.dll**.
+    
+    ![Embed Interop Types set to True][3]
 
 2.  #### Obtain the services
     
-    With the package installed, you are ready to obtain those services from your code. Because they are exported as MEF contracts, you can import them either via MEF's Import attribute, or through the [IComponentModel service][4] in code. Here's a sample code snippet:  
-      
+    With the package installed, you are ready to obtain those services from your code. Because they are exported as MEF contracts, you can import them either via MEF's Import attribute, or through the [IComponentModel service][4] in code. Here's a sample code snippet:
+    
     `var componentModel = (IComponentModel)GetService(typeof(SComponentModel));`  
     `IVsPackageInstallerServices installerServices = componentModel.GetService<IVsPackageInstallerServices>();`  
     `var installedPackages = installerServices.GetInstalledPackages();`
