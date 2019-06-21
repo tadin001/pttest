@@ -1,11 +1,11 @@
 ---
-ID: 226116
+ID: 998
 post_title: NuGet Package Identity and Trust
-author: seroha
+author: Serhii Rohatin
 post_excerpt: ""
 layout: post
 permalink: >
-  https://qadevblogs.wpengine.com/visualstudio/nuget-package-identity-and-trust/
+  http://devblogs.microsoft.com/nuget/nuget-package-identity-and-trust-2/
 published: true
 post_date: 2017-04-17 00:00:00
 ---

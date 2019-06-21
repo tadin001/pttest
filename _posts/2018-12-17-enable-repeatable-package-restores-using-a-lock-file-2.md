@@ -1,13 +1,13 @@
 ---
-ID: 226155
+ID: 1036
 post_title: >
   Enable repeatable package restores using
   a lock file
-author: seroha
+author: Serhii Rohatin
 post_excerpt: ""
 layout: post
 permalink: >
-  https://qadevblogs.wpengine.com/visualstudio/enable-repeatable-package-restores-using-a-lock-file/
+  http://devblogs.microsoft.com/nuget/enable-repeatable-package-restores-using-a-lock-file-2/
 published: true
 post_date: 2018-12-17 00:00:00
 ---

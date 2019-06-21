@@ -1,13 +1,13 @@
 ---
-ID: 226135
+ID: 1016
 post_title: >
   Migrate to PackageReference with 3
   clicks
-author: seroha
+author: Serhii Rohatin
 post_excerpt: ""
 layout: post
 permalink: >
-  https://qadevblogs.wpengine.com/visualstudio/migrate-to-packagereference-with-3-clicks/
+  http://devblogs.microsoft.com/nuget/migrate-to-packagereference-with-3-clicks/
 published: true
 post_date: 2018-04-09 00:00:00
 ---

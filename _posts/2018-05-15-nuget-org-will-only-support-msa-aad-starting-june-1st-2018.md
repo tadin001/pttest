@@ -1,13 +1,13 @@
 ---
-ID: 226141
+ID: 1022
 post_title: >
   NuGet.org will only support MSA/AAD
   starting June 1st, 2018
-author: seroha
+author: Serhii Rohatin
 post_excerpt: ""
 layout: post
 permalink: >
-  https://qadevblogs.wpengine.com/visualstudio/nuget-org-will-only-support-msa-aad-starting-june-1st-2018/
+  http://devblogs.microsoft.com/nuget/nuget-org-will-only-support-msa-aad-starting-june-1st-2018/
 published: true
 post_date: 2018-05-15 00:00:00
 ---

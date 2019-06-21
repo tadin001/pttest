@@ -1,11 +1,11 @@
 ---
-ID: 226147
+ID: 1028
 post_title: NuGet.org starts repo-signing packages
-author: seroha
+author: Serhii Rohatin
 post_excerpt: ""
 layout: post
 permalink: >
-  https://qadevblogs.wpengine.com/visualstudio/nuget-org-starts-repo-signing-packages/
+  http://devblogs.microsoft.com/nuget/nuget-org-starts-repo-signing-packages/
 published: true
 post_date: 2018-08-10 00:00:00
 ---

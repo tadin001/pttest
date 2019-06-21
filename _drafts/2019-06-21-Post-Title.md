@@ -1,11 +1,11 @@
 ---
-ID: 226199
+ID: 1050
 post_title: Post Title
-author: seroha
+author: Serhii Rohatin
 post_excerpt: ""
 layout: post
 permalink: >
-  https://qadevblogs.wpengine.com/visualstudio/?p=226199
+  http://devblogs.microsoft.com/nuget/?p=1050
 published: false
 ---
 Post goes here

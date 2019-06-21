@@ -1,13 +1,13 @@
 ---
-ID: 226188
+ID: 1042
 post_title: >
   Customize object displays in the Visual
   Studio debugger YOUR way
-author: seroha
+author: Serhii Rohatin
 post_excerpt: ""
 layout: post
 permalink: >
-  https://qadevblogs.wpengine.com/visualstudio/customize-object-displays-in-the-visual-studio-debugger-your-way-2/
+  http://devblogs.microsoft.com/nuget/customize-object-displays-in-the-visual-studio-debugger-your-way-2/
 published: true
 post_date: 2019-06-10 09:00:03
 ---

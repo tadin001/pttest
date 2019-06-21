@@ -1,11 +1,11 @@
 ---
-ID: 226121
+ID: 1002
 post_title: 'What&#8217;s Nu in NuGet with Visual Studio 2017 version 15.3?'
-author: seroha
+author: Serhii Rohatin
 post_excerpt: ""
 layout: post
 permalink: >
-  https://qadevblogs.wpengine.com/visualstudio/whats-nu-in-nuget-with-visual-studio-2017-version-15-3/
+  http://devblogs.microsoft.com/nuget/whats-nu-in-nuget-with-visual-studio-2017-version-15-3-2/
 published: true
 post_date: 2017-08-15 16:17:19
 ---
@@ -55,19 +55,19 @@ If you are okay with the risk as stated by the warning and do not want to see it
 
 To suppress the warning, you can go to the package properties window and add
 
-[NU1701][15] to the NoWarn property: ![Suppress warning for package reference][16] This results in the following entry being created in the project file: NU1701 
+[NU1701][15] to the NoWarn property: ![Suppress warning for package reference][16] This results in the following entry being created in the project file: NU1701
 
 #### Suppress the warning at a project level
 
 If you do not want to see the warning at all in the project irrespective of the package reference that introduces it, you can suppress it in the project’s build properties:
 
-![Suppress warning at a project level][17] This results in the following entry being created in the project file: NU1701 
+![Suppress warning at a project level][17] This results in the following entry being created in the project file: NU1701
 
 #### Elevate a warning to an error
 
 In case you want to elevate a specific warning to an error, you can do so by specifying the same in the Build properties:
 
-![Elevate warning to error][18] This results in the following entry being created in the project file: NU1605 
+![Elevate warning to error][18] This results in the following entry being created in the project file: NU1605
 
 #### A word of caution!
 

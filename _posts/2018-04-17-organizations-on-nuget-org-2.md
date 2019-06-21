@@ -1,11 +1,11 @@
 ---
-ID: 226137
+ID: 1018
 post_title: Organizations on NuGet.org
-author: seroha
+author: Serhii Rohatin
 post_excerpt: ""
 layout: post
 permalink: >
-  https://qadevblogs.wpengine.com/visualstudio/organizations-on-nuget-org/
+  http://devblogs.microsoft.com/nuget/organizations-on-nuget-org-2/
 published: true
 post_date: 2018-04-17 00:00:00
 ---

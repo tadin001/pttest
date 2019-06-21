@@ -1,13 +1,13 @@
 ---
-ID: 226186
+ID: 1040
 post_title: >
   Azure IoT Edge Tools Extension (Preview)
   Announcement
-author: seroha
+author: Serhii Rohatin
 post_excerpt: ""
 layout: post
 permalink: >
-  https://qadevblogs.wpengine.com/visualstudio/azure-iot-edge-tools-extension-preview-announcement-2/
+  http://devblogs.microsoft.com/nuget/azure-iot-edge-tools-extension-preview-announcement-2/
 published: true
 post_date: 2019-05-28 16:10:46
 ---

@@ -1,11 +1,11 @@
 ---
-ID: 226125
+ID: 1006
 post_title: NuGet Package Signing
-author: seroha
+author: Serhii Rohatin
 post_excerpt: ""
 layout: post
 permalink: >
-  https://qadevblogs.wpengine.com/visualstudio/nuget-package-signing/
+  http://devblogs.microsoft.com/nuget/nuget-package-signing/
 published: true
 post_date: 2017-09-14 00:00:00
 ---
@@ -109,7 +109,7 @@ NuGet.org will have configurable policies that will allow us to enforce submissi
 
 Clients can configure themselves to not only accept, but more importantly **require** specific security constraints, like the ability to block unsigned packages or define a list of signed authors they trust. We will introduce a set of client policies to define the secure requirements per package source. In the table below, you can see a possible example that explains the client behaviors for different package types based on three different policies:
 
-table.posttable { border-width: 1px; border-color: #004880; border-collapse: collapse; } table.posttable th { border-width: 1px; padding: 8px; border-style: solid; border-color:white; background-color: #004880; color:white; text-align: left; } table.posttable td { border-width: 1px; padding: 8px; border-style: solid; border-color: #004880; background-color: #ffffff; vertical-align: top } 
+table.posttable { border-width: 1px; border-color: #004880; border-collapse: collapse; } table.posttable th { border-width: 1px; padding: 8px; border-style: solid; border-color:white; background-color: #004880; color:white; text-align: left; } table.posttable td { border-width: 1px; padding: 8px; border-style: solid; border-color: #004880; background-color: #ffffff; vertical-align: top }
 
 <table class="posttable">
   <thead>

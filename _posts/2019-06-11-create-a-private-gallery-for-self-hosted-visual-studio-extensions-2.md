@@ -1,13 +1,13 @@
 ---
-ID: 226190
+ID: 1044
 post_title: >
   Create a private gallery for self-hosted
   Visual Studio extensions
-author: seroha
+author: Serhii Rohatin
 post_excerpt: ""
 layout: post
 permalink: >
-  https://qadevblogs.wpengine.com/visualstudio/create-a-private-gallery-for-self-hosted-visual-studio-extensions-2/
+  http://devblogs.microsoft.com/nuget/create-a-private-gallery-for-self-hosted-visual-studio-extensions-2/
 published: true
 post_date: 2019-06-11 08:00:17
 ---

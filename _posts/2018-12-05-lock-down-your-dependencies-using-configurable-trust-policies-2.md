@@ -1,13 +1,13 @@
 ---
-ID: 226153
+ID: 1034
 post_title: >
   Lock down your dependencies using
   configurable trust policies
-author: seroha
+author: Serhii Rohatin
 post_excerpt: ""
 layout: post
 permalink: >
-  https://qadevblogs.wpengine.com/visualstudio/lock-down-your-dependencies-using-configurable-trust-policies/
+  http://devblogs.microsoft.com/nuget/lock-down-your-dependencies-using-configurable-trust-policies-2/
 published: true
 post_date: 2018-12-05 00:00:00
 ---
@@ -67,7 +67,7 @@ The following `nuget.config` file uses `require` mode and trusts packages in NuG
 
  &lt;packageSources&gt;
     &lt;clear /&gt;
-    &lt;add key="local" value="\myserverpackages" /&gt;
+    &lt;add key="local" value="myserverpackages" /&gt;
     &lt;add key="nuget" value="https://api.nuget.org/v3/index.json" /&gt;
  &lt;/packageSources&gt;
 

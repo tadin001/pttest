@@ -1,11 +1,11 @@
 ---
-ID: 226133
+ID: 1014
 post_title: 'Incident report &#8211; NuGet.org downtime on March 22, 2018'
-author: seroha
+author: Serhii Rohatin
 post_excerpt: ""
 layout: post
 permalink: >
-  https://qadevblogs.wpengine.com/visualstudio/incident-report-nuget-org-downtime-on-march-22-2018/
+  http://devblogs.microsoft.com/nuget/incident-report-nuget-org-downtime-on-march-22-2018/
 published: true
 post_date: 2018-03-22 00:00:00
 ---

@@ -1,13 +1,13 @@
 ---
-ID: 226123
+ID: 1004
 post_title: >
   Changes to NuGet.org service management,
   and performance improvements in China
-author: seroha
+author: Serhii Rohatin
 post_excerpt: ""
 layout: post
 permalink: >
-  https://qadevblogs.wpengine.com/visualstudio/changes-to-nuget-org-service-management-and-performance-improvements-in-china/
+  http://devblogs.microsoft.com/nuget/changes-to-nuget-org-service-management-and-performance-improvements-in-china/
 published: true
 post_date: 2017-09-07 00:00:00
 ---
