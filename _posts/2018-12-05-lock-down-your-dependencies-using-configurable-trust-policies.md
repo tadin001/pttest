@@ -57,35 +57,36 @@ The following `nuget.config` file uses `require` mode and trusts packages in NuG
 
 > Note that the global package folder has also been customized.
 
-<pre class="highlight"><code>&lt;span class="cp">&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;/span>
-&lt;span class="nt">&lt;configuration&gt;&lt;/span>
-  
-  &lt;span class="nt">&lt;config&gt;&lt;/span>
-    &lt;span class="nt">&lt;add&lt;/span> &lt;span class="na">key=&lt;/span>&lt;span class="s">"signatureValidationMode"&lt;/span> &lt;span class="na">value=&lt;/span>&lt;span class="s">"require"&lt;/span> &lt;span class="nt">/&gt;&lt;/span>    
-    &lt;span class="nt">&lt;add&lt;/span> &lt;span class="na">key=&lt;/span>&lt;span class="s">"globalPackagesFolder"&lt;/span> &lt;span class="na">value=&lt;/span>&lt;span class="s">"%USERPROFILE%\.nuget\TrustedPackages"&lt;/span> &lt;span class="nt">/&gt;&lt;/span>
-  &lt;span class="nt">&lt;/config&gt;&lt;/span>
+<pre><code class="xml">&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;configuration&gt;
 
- &lt;span class="nt">&lt;packageSources&gt;&lt;/span>
-    &lt;span class="nt">&lt;clear&lt;/span> &lt;span class="nt">/&gt;&lt;/span>
-    &lt;span class="nt">&lt;add&lt;/span> &lt;span class="na">key=&lt;/span>&lt;span class="s">"local"&lt;/span> &lt;span class="na">value=&lt;/span>&lt;span class="s">"\\myserver\packages\"&lt;/span> &lt;span class="nt">/&gt;&lt;/span>
-    &lt;span class="nt">&lt;add&lt;/span> &lt;span class="na">key=&lt;/span>&lt;span class="s">"nuget"&lt;/span> &lt;span class="na">value=&lt;/span>&lt;span class="s">"https://api.nuget.org/v3/index.json"&lt;/span> &lt;span class="nt">/&gt;&lt;/span>
- &lt;span class="nt">&lt;/packageSources&gt;&lt;/span>
-  
- &lt;span class="nt">&lt;trustedSigners&gt;&lt;/span> 
-  &lt;span class="nt">&lt;author&lt;/span> &lt;span class="na">name=&lt;/span>&lt;span class="s">"MyCompanyCert"&lt;/span>&lt;span class="nt">&gt;&lt;/span>
-    &lt;span class="nt">&lt;certificate&lt;/span> &lt;span class="na">fingerprint=&lt;/span>&lt;span class="s">"F23175B9B052CE9C9D7E1546316F48A422DA3051FC79F4DB58ED5D78E372CEEC"&lt;/span> 
-                 &lt;span class="na">hashAlgorithm=&lt;/span>&lt;span class="s">"SHA256"&lt;/span> 
-                 &lt;span class="na">allowUntrustedRoot=&lt;/span>&lt;span class="s">"true"&lt;/span> &lt;span class="nt">/&gt;&lt;/span> &lt;span class="c">&lt;!-- Enable private certificates--&gt;&lt;/span>
-  &lt;span class="nt">&lt;/author&gt;&lt;/span>
-   
-  &lt;span class="nt">&lt;repository&lt;/span> &lt;span class="na">name=&lt;/span>&lt;span class="s">"nuget.org"&lt;/span> &lt;span class="na">serviceIndex=&lt;/span>&lt;span class="s">"https://api.nuget.org/v3/index.json"&lt;/span>&lt;span class="nt">&gt;&lt;/span>
-    &lt;span class="nt">&lt;certificate&lt;/span> &lt;span class="na">fingerprint=&lt;/span>&lt;span class="s">"0E5F38F57DC1BCC806D8494F4F90FBCEDD988B46760709CBEEC6F4219AA6157D"&lt;/span> 
-                 &lt;span class="na">hashAlgorithm=&lt;/span>&lt;span class="s">"SHA256"&lt;/span> 
-                 &lt;span class="na">allowUntrustedRoot=&lt;/span>&lt;span class="s">"false"&lt;/span> &lt;span class="nt">/&gt;&lt;/span>
-    &lt;span class="nt">&lt;owners&gt;&lt;/span>Microsoft&lt;span class="nt">&lt;/owners&gt;&lt;/span>
-  &lt;span class="nt">&lt;/repository&gt;&lt;/span>
- &lt;span class="nt">&lt;/trustedSigners&gt;&lt;/span>
-&lt;span class="nt">&lt;/configuration&gt;&lt;/span></code></pre>
+  &lt;config&gt;
+    &lt;add key="signatureValidationMode" value="require" /&gt;    
+    &lt;add key="globalPackagesFolder" value="%USERPROFILE%\.nuget\TrustedPackages" /&gt;
+  &lt;/config&gt;
+
+ &lt;packageSources&gt;
+    &lt;clear /&gt;
+    &lt;add key="local" value="\\myserver\packages\" /&gt;
+    &lt;add key="nuget" value="https://api.nuget.org/v3/index.json" /&gt;
+ &lt;/packageSources&gt;
+
+ &lt;trustedSigners&gt; 
+  &lt;author name="MyCompanyCert"&gt;
+    &lt;certificate fingerprint="F23175B9B052CE9C9D7E1546316F48A422DA3051FC79F4DB58ED5D78E372CEEC" 
+                 hashAlgorithm="SHA256" 
+                 allowUntrustedRoot="true" /&gt; &lt;!-- Enable private certificates--&gt;
+  &lt;/author&gt;
+
+  &lt;repository name="nuget.org" serviceIndex="https://api.nuget.org/v3/index.json"&gt;
+    &lt;certificate fingerprint="0E5F38F57DC1BCC806D8494F4F90FBCEDD988B46760709CBEEC6F4219AA6157D" 
+                 hashAlgorithm="SHA256" 
+                 allowUntrustedRoot="false" /&gt;
+    &lt;owners&gt;Microsoft&lt;/owners&gt;
+  &lt;/repository&gt;
+ &lt;/trustedSigners&gt;
+&lt;/configuration&gt;
+</code></pre>
 
 ## Reference documentation
 
