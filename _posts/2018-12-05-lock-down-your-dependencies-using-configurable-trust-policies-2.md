@@ -1,13 +1,13 @@
 ---
-ID: 1034
+ID: 226243
 post_title: >
   Lock down your dependencies using
   configurable trust policies
-author: Serhii Rohatin
+author: seroha
 post_excerpt: ""
 layout: post
 permalink: >
-  http://devblogs.microsoft.com/nuget/lock-down-your-dependencies-using-configurable-trust-policies-2/
+  https://qadevblogs.wpengine.com/visualstudio/lock-down-your-dependencies-using-configurable-trust-policies-2/
 published: true
 post_date: 2018-12-05 00:00:00
 ---

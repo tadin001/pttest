@@ -1,11 +1,11 @@
 ---
-ID: 1012
+ID: 226221
 post_title: NuGet Spring 2018 Roadmap
-author: Serhii Rohatin
+author: seroha
 post_excerpt: ""
 layout: post
 permalink: >
-  http://devblogs.microsoft.com/nuget/nuget-spring-2018-roadmap-2/
+  https://qadevblogs.wpengine.com/visualstudio/nuget-spring-2018-roadmap-2/
 published: true
 post_date: 2018-03-01 00:00:00
 ---

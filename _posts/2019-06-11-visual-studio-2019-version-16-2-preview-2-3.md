@@ -1,13 +1,13 @@
 ---
-ID: 1046
+ID: 226255
 post_title: >
   Visual Studio 2019 version 16.2 Preview
   2
-author: Serhii Rohatin
+author: seroha
 post_excerpt: ""
 layout: post
 permalink: >
-  http://devblogs.microsoft.com/nuget/visual-studio-2019-version-16-2-preview-2-2/
+  https://qadevblogs.wpengine.com/visualstudio/visual-studio-2019-version-16-2-preview-2-3/
 published: true
 post_date: 2019-06-11 10:00:33
 ---

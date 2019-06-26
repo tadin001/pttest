@@ -1,13 +1,13 @@
 ---
-ID: 1008
+ID: 226217
 post_title: >
   NuGet.org package publishing workflow
   – behind the scenes
-author: Serhii Rohatin
+author: seroha
 post_excerpt: ""
 layout: post
 permalink: >
-  http://devblogs.microsoft.com/nuget/nuget-org-package-publishing-workflow-behind-the-scenes/
+  https://qadevblogs.wpengine.com/visualstudio/nuget-org-package-publishing-workflow-behind-the-scenes-2/
 published: true
 post_date: 2018-02-01 00:00:00
 ---

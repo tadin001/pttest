@@ -1,11 +1,11 @@
 ---
-ID: 1038
+ID: 226247
 post_title: NuGet Spring 2019 Roadmap
-author: Serhii Rohatin
+author: seroha
 post_excerpt: ""
 layout: post
 permalink: >
-  http://devblogs.microsoft.com/nuget/nuget-spring-2019-roadmap-2/
+  https://qadevblogs.wpengine.com/visualstudio/nuget-spring-2019-roadmap-2/
 published: true
 post_date: 2019-04-10 00:00:00
 ---

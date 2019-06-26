@@ -1,13 +1,13 @@
 ---
-ID: 1030
+ID: 226239
 post_title: >
   Introducing Source Code Link for NuGet
   packages
-author: Serhii Rohatin
+author: seroha
 post_excerpt: ""
 layout: post
 permalink: >
-  http://devblogs.microsoft.com/nuget/introducing-source-code-link-for-nuget-packages-2/
+  https://qadevblogs.wpengine.com/visualstudio/introducing-source-code-link-for-nuget-packages-2/
 published: true
 post_date: 2018-08-27 00:00:00
 ---

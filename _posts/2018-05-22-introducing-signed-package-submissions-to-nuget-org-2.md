@@ -1,13 +1,13 @@
 ---
-ID: 1024
+ID: 226233
 post_title: >
   Introducing signed package submissions
   to NuGet.org
-author: Serhii Rohatin
+author: seroha
 post_excerpt: ""
 layout: post
 permalink: >
-  http://devblogs.microsoft.com/nuget/introducing-signed-package-submissions-to-nuget-org/
+  https://qadevblogs.wpengine.com/visualstudio/introducing-signed-package-submissions-to-nuget-org-2/
 published: true
 post_date: 2018-05-22 00:00:00
 ---

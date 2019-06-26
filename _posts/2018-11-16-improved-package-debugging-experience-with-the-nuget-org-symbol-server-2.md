@@ -1,13 +1,13 @@
 ---
-ID: 1032
+ID: 226241
 post_title: >
   Improved package debugging experience
   with the NuGet.org symbol server
-author: Serhii Rohatin
+author: seroha
 post_excerpt: ""
 layout: post
 permalink: >
-  http://devblogs.microsoft.com/nuget/improved-package-debugging-experience-with-the-nuget-org-symbol-server-2/
+  https://qadevblogs.wpengine.com/visualstudio/improved-package-debugging-experience-with-the-nuget-org-symbol-server-2/
 published: true
 post_date: 2018-11-16 00:00:00
 ---

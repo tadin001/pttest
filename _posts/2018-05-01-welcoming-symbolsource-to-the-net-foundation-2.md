@@ -1,13 +1,13 @@
 ---
-ID: 1020
+ID: 226229
 post_title: >
   Welcoming SymbolSource to the .NET
   Foundation
-author: Serhii Rohatin
+author: seroha
 post_excerpt: ""
 layout: post
 permalink: >
-  http://devblogs.microsoft.com/nuget/welcoming-symbolsource-to-the-net-foundation/
+  https://qadevblogs.wpengine.com/visualstudio/welcoming-symbolsource-to-the-net-foundation-2/
 published: true
 post_date: 2018-05-01 00:00:00
 ---

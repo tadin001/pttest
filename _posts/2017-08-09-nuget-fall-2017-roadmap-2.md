@@ -1,11 +1,11 @@
 ---
-ID: 1000
+ID: 226209
 post_title: NuGet Fall 2017 Roadmap
-author: Serhii Rohatin
+author: seroha
 post_excerpt: ""
 layout: post
 permalink: >
-  http://devblogs.microsoft.com/nuget/nuget-fall-2017-roadmap-2/
+  https://qadevblogs.wpengine.com/visualstudio/nuget-fall-2017-roadmap-2/
 published: true
 post_date: 2017-08-09 00:00:00
 ---

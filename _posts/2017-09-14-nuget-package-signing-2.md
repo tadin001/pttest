@@ -1,11 +1,11 @@
 ---
-ID: 1006
+ID: 226215
 post_title: NuGet Package Signing
-author: Serhii Rohatin
+author: seroha
 post_excerpt: ""
 layout: post
 permalink: >
-  http://devblogs.microsoft.com/nuget/nuget-package-signing/
+  https://qadevblogs.wpengine.com/visualstudio/nuget-package-signing-2/
 published: true
 post_date: 2017-09-14 00:00:00
 ---

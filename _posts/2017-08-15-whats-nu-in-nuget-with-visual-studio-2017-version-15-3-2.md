@@ -1,11 +1,11 @@
 ---
-ID: 1002
+ID: 226211
 post_title: 'What&#8217;s Nu in NuGet with Visual Studio 2017 version 15.3?'
-author: Serhii Rohatin
+author: seroha
 post_excerpt: ""
 layout: post
 permalink: >
-  http://devblogs.microsoft.com/nuget/whats-nu-in-nuget-with-visual-studio-2017-version-15-3-2/
+  https://qadevblogs.wpengine.com/visualstudio/whats-nu-in-nuget-with-visual-studio-2017-version-15-3-2/
 published: true
 post_date: 2017-08-15 16:17:19
 ---
